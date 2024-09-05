@@ -47,7 +47,7 @@ footer {
 
 /* Hero Section Styles */
 .hero {
-    background-image: url('images/hero-background.jpg'); /* Ensure this path is correct */
+    background-image: url('assets/images/hero-background.jpg'); /* Ensure this path is correct */
     background-size: cover;
     background-position: center;
     color: #fff;
