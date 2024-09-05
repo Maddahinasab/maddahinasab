@@ -46,7 +46,6 @@ footer {
 }
 
 /* Hero Section Styles */
-/* Hero Section Styles */
 .hero {
     background-image: url('assets/images/hero-background.jpg');
     background-size: cover; /* Ensures the image covers the entire section */
@@ -54,10 +53,10 @@ footer {
     background-repeat: no-repeat; /* Prevents repeating the image */
     color: #fff;
     text-align: center;
-    padding: 50px 20px; /* Adjust padding as needed */
+    padding: 100px 20px; /* Adjust padding as needed for vertical spacing */
     position: relative;
-     max-width: 100%;
-    max-height: 300px; /* Sets a maximum height */
+    width: 100%; /* Full width */
+    height: 500px; /* Adjust height to fit the image without distortion */
     overflow: hidden; /* Ensures any overflow is hidden */
 }
 
