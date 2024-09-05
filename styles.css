@@ -177,7 +177,7 @@ p {
 /* Portrait Image on About Me Page */
 .portrait {
     display: block;
-    max-width: 150px;
+    max-width: 300px;
     height: auto;
     border-radius: 50%;
     margin: 20px auto;
