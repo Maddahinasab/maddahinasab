@@ -56,7 +56,7 @@ footer {
     text-align: center;
     padding: 50px 20px; /* Adjust padding as needed */
     position: relative;
-    max-height: 600px; /* Sets a maximum height */
+    max-height: 300px; /* Sets a maximum height */
     overflow: hidden; /* Ensures any overflow is hidden */
 }
 
