@@ -53,7 +53,7 @@ footer {
     background-repeat: no-repeat; /* Prevents repeating the image */
     color: #fff;
     text-align: center;
-    padding: 100px 20px; /* Adjust as needed */
+    padding: 50px 10px; /* Adjust as needed */
     position: relative;
     min-height: 400px; /* Ensures a minimum height for the hero section */
 }
