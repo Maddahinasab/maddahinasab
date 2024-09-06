@@ -40,9 +40,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    position: relative; /* Make footer relative to page flow */
+    margin-top: 20px; /* Adds space above the footer */
 }
 
 /* Hero Section Styles */
