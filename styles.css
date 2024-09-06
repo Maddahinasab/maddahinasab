@@ -11,6 +11,9 @@ body {
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Minimum height of viewport */
 }
 
 header {
@@ -42,22 +45,20 @@ nav ul li a.active {
     border-bottom: 2px solid #007bff;
 }
 
+/* Remove position and align it properly */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    margin-top: 20px;
-    position: relative; /* Ensure footer stays in the flow */
-    left: 0; /* Align footer correctly */
-    overflow: hidden; /* Prevent any overflow */
+    margin-top: auto; /* Pushes footer to the bottom of the page */
 }
 
 /* Hero Section Styles */
 .hero {
     background-image: url('assets/images/hero-background.jpg');
-    background-size: contain; /* Adjusts to fit within the container */
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
@@ -127,6 +128,7 @@ footer {
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
+    flex: 1; /* Allows the main content to grow and push the footer down */
     text-align: center;
 }
 
