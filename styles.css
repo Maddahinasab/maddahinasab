@@ -16,7 +16,7 @@ body {
     min-height: 100vh; /* Minimum height of viewport */
 }
 
-/* Sidebar Styles - Applied to Homepage and About Page */
+/* Sidebar Styles - Specific to Homepage */
 .sidebar {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
@@ -57,11 +57,49 @@ body {
 
 /* Adjust page container to account for the sidebar */
 .page-container {
-    margin-left: 220px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
-    width: calc(100% - 220px); /* Adjusts width to fit next to the sidebar */
+    margin-left: 200px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
+    width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
 }
 
-/* Ensure Hero Section does not overlap with sidebar */
+/* Header, Footer, and Other Sections */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Hero Section Styles */
 .hero {
     background-image: url('assets/images/hero-background.jpg');
     background-size: cover;
@@ -71,13 +109,22 @@ body {
     text-align: center;
     padding: 100px 20px;
     position: relative;
-    width: calc(100% - 200px); /* Adjusts for sidebar width */
-    margin-left: 200px; /* Moves hero section to the right to avoid overlap with the sidebar */
-    height: 698px;
+    width: 100%;
+    height: 699px;
     overflow: hidden;
 }
 
-/* Hero Content Styles */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -98,7 +145,7 @@ body {
 }
 
 .hero h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 10px 0;
 }
 
@@ -185,10 +232,4 @@ p {
     height: auto;
     border-radius: 50%;
     margin: 20px auto;
-}
-
-/* Specific styles for the About Me Page */
-.about-page .page-container {
-    margin-left: 220px; /* Same as sidebar width */
-    width: calc(100% - 220px); /* Same as sidebar width */
 }
