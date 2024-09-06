@@ -16,7 +16,7 @@ body {
     min-height: 100vh; /* Minimum height of viewport */
 }
 
-/* Sidebar Styles */
+/* Sidebar Styles - Applied to Homepage and About Page */
 .sidebar {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
@@ -61,7 +61,23 @@ body {
     width: calc(100% - 220px); /* Adjusts width to fit next to the sidebar */
 }
 
-/* Header, Footer, and Other Sections */
+/* Ensure Hero Section does not overlap with sidebar */
+.hero {
+    background-image: url('assets/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    width: 100%;
+    height: 698px;
+    overflow: hidden;
+    margin-left: 200px; /* Adjusts for sidebar width */
+}
+
+/* Rest of your styles */
 header {
     background-color: #333;
     color: #fff;
@@ -100,31 +116,6 @@ footer {
 }
 
 /* Hero Section Styles */
-.hero {
-    background-image: url('assets/images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-    width: 100%;
-    height: 697px;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-    z-index: 1;
-}
-
 .hero-content {
     position: relative;
     z-index: 2;
