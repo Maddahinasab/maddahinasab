@@ -12,8 +12,50 @@ body {
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
-    flex-direction: column; /* Arrange children vertically */
+    flex-direction: row; /* Arrange children in a row to accommodate the sidebar */
     min-height: 100vh; /* Minimum height of viewport */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #333; /* Matches header and footer color */
+    color: #fff;
+    padding: 20px;
+    width: 200px; /* Fixed width for the sidebar */
+    position: fixed; /* Sticks to the left side of the page */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height of the viewport */
+    z-index: 1000; /* Ensures it stays above the main content */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px; /* Space between links */
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    display: block; /* Makes the entire list item clickable */
+}
+
+.sidebar ul li a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* Adjust main content to account for sidebar */
+.main-content {
+    margin-left: 220px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
+    padding: 20px;
+    max-width: calc(100% - 220px); /* Adjusts width to fit next to the sidebar */
+    flex: 1; /* Allows the main content to grow and push the footer down */
+    text-align: center;
 }
 
 header {
@@ -21,6 +63,11 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays on top of other content */
 }
 
 nav ul {
@@ -38,7 +85,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Highlight the active navigation link */
 nav ul li a.active {
     font-weight: bold;
     color: #007bff;
@@ -51,7 +97,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    width: 100%;
+    width: calc(100% - 220px); /* Adjusts width to fit next to sidebar */
+    margin-left: 220px; /* Adds margin to avoid overlap with the sidebar */
     margin-top: auto; /* Pushes footer to the bottom of the page */
 }
 
@@ -65,7 +112,8 @@ footer {
     text-align: center;
     padding: 100px 20px;
     position: relative;
-    width: 100%;
+    margin-left: 220px; /* Adds margin to avoid overlap with the sidebar */
+    width: calc(100% - 220px); /* Adjusts width of hero section to fit next to sidebar */
     height: 699px;
     overflow: hidden;
 }
@@ -125,14 +173,6 @@ footer {
 }
 
 /* Styles for About, Publications, Law Career, Gallery, Media Pages */
-.main-content {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    flex: 1; /* Allows the main content to grow and push the footer down */
-    text-align: center;
-}
-
 h2 {
     color: #333;
     margin-bottom: 20px;
