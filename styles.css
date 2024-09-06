@@ -83,10 +83,11 @@ footer {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensures the text is above the overlay */
     max-width: 600px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; /* Adds padding around the text for better readability */
+    transform: translateY(30px); /* Moves only the text down */
 }
 
 .hero h1, .hero h2, .hero p {
