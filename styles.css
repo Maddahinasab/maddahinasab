@@ -61,12 +61,13 @@ footer {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
-    text-align: end;
+    color: #333;
+    text-align: center;
     padding: 100px 20px;
+    transform: translateY(30px); /* Moves the content 30px down */
     position: relative;
     width: 100%;
-    height: 680px;
+    height: 687px;
     overflow: hidden;
 }
 
