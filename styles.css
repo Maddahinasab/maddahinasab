@@ -16,7 +16,7 @@ body {
     min-height: 100vh; /* Minimum height of viewport */
 }
 
-/* Sidebar Styles - Specific to Homepage */
+/* Sidebar Styles */
 .sidebar {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
@@ -57,8 +57,8 @@ body {
 
 /* Adjust page container to account for the sidebar */
 .page-container {
-    margin-left: 200px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
-    width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
+    margin-left: 220px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
+    width: calc(100% - 220px); /* Adjusts width to fit next to the sidebar */
 }
 
 /* Header, Footer, and Other Sections */
@@ -232,4 +232,10 @@ p {
     height: auto;
     border-radius: 50%;
     margin: 20px auto;
+}
+
+/* Specific styles for the About Me Page */
+.about-page .page-container {
+    margin-left: 220px; /* Same as sidebar width */
+    width: calc(100% - 220px); /* Same as sidebar width */
 }
