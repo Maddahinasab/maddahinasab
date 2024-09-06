@@ -62,11 +62,11 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    text-align: center;
+    text-align: end;
     padding: 100px 20px;
     position: relative;
     width: 100%;
-    height: 693px;
+    height: 680px;
     overflow: hidden;
 }
 
