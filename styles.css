@@ -61,6 +61,12 @@ body {
     width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
 }
 
+/* Specific styles for the About Me Page */
+.about-content {
+    padding: 20px 40px 40px; /* Adds padding: 20px top, 40px left/right, 40px bottom */
+    margin-left: 200px; /* Ensures content starts after the sidebar */
+}
+
 /* Header, Footer, and Other Sections */
 header {
     background-color: #333;
