@@ -240,22 +240,25 @@ p {
     margin: 20px auto;
 }
 
-/* Padding for Publications Page */
-.publications-page ul {
-    list-style-type: none;
-    padding: 0;
+/* Add padding and spacing to publication list items */
+.publications-list {
+    padding: 20px; /* Adds padding around the entire list */
+    margin: 0 20px; /* Adds margin around the list */
 }
 
-.publications-page ul li {
-    padding: 10px 0; /* Adds padding above and below each publication line */
-    margin: 5px 0; /* Adds some margin between each publication */
+.publications-list li {
+    margin-bottom: 15px; /* Space between each list item */
+    line-height: 1.8; /* Increases line height for better readability */
+    padding: 10px; /* Adds padding inside each list item */
+    border-bottom: 1px solid #ddd; /* Adds a subtle border below each item for separation */
 }
 
-.publications-page ul li a {
-    color: #007bff;
+.publications-list li a {
     text-decoration: none;
+    color: #007bff; /* Link color */
 }
 
-.publications-page ul li a:hover {
-    text-decoration: underline;
+.publications-list li a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
+
