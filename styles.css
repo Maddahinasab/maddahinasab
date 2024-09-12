@@ -67,6 +67,22 @@ body {
     margin-left: 200px; /* Ensures content starts after the sidebar */
 }
 
+/* Publications Page Styles */
+.publications-content ul {
+    padding-left: 20px; /* Adds padding to the left of the list */
+    margin-bottom: 20px; /* Adds space below the list */
+}
+
+.publications-content ul li {
+    padding: 10px 0; /* Adds vertical padding between each list item */
+    line-height: 1.8; /* Increases line height for better readability */
+}
+
+/* Optional: Add some padding for paragraphs as well */
+.publications-content p {
+    padding: 10px 0; /* Adds vertical padding between paragraphs */
+}
+
 /* Header, Footer, and Other Sections */
 header {
     background-color: #333;
@@ -239,20 +255,3 @@ p {
     border-radius: 50%;
     margin: 20px auto;
 }
-
-/* Publications Page Styles */
-.main-content ul {
-    padding-left: 20px; /* Adds padding to the left of the list */
-    margin-bottom: 20px; /* Adds space below the list */
-}
-
-.main-content ul li {
-    padding: 10px 0; /* Adds vertical padding between each list item */
-    line-height: 1.8; /* Increases line height for better readability */
-}
-
-/* Optional: Add some padding for paragraphs as well */
-.main-content p {
-    padding: 10px 0; /* Adds vertical padding between paragraphs */
-}
-
