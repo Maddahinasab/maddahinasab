@@ -67,15 +67,15 @@ body {
     margin-left: 200px; /* Ensures content starts after the sidebar */
 }
 
-/* Header, Footer, and Other Sections */
+/* Header Styles */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 20px; /* Adjusted padding to prevent overlap */
     text-align: center;
     display: flex;
-    align-items: center; /* Vertically center items */
-    justify-content: space-between; /* Space between logo and navigation */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
     position: fixed; /* Ensure it stays fixed at the top */
     top: 0;
     left: 200px; /* Account for the sidebar width */
@@ -83,7 +83,7 @@ header {
     z-index: 999; /* Ensures the header is above the content */
 }
 
-/* Ensure logo container is correctly aligned */
+/* Logo Container */
 .logo-container {
     display: flex;
     align-items: center;
@@ -103,15 +103,21 @@ header {
     margin: 0; /* Remove default margin */
 }
 
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Ensure no extra margin */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Align tabs horizontally */
+    justify-content: center; /* Center tabs */
 }
 
 nav ul li {
-    display: inline;
     margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
 }
 
 nav ul li a {
