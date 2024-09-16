@@ -86,23 +86,19 @@ header {
 /* Logo Container */
 .logo-container {
     display: flex;
-    flex-direction: column; /* Stack logo and motto vertically */
-    align-items: center; /* Center content horizontally */
-    margin-bottom: 10px; /* Space between logo and navigation */
+    align-items: center; /* Align logo and motto vertically */
+    justify-content: center; /* Center the whole container */
+    margin-bottom: 10px; /* Space between logo-motto and navigation */
 }
 
 .logo img {
     max-height: 50px; /* Adjust this value as needed */
+    margin-right: 10px; /* Space between the logo and the motto */
 }
 
 .motto {
-    margin-top: 5px; /* Space between the logo and the motto */
-}
-
-.motto p {
-    font-size: 1rem; /* Adjust font size as needed */
+    font-size: 1.2rem; /* Adjust font size as needed */
     color: #fff; /* Adjust color as needed */
-    margin: 0; /* Remove default margin */
 }
 
 /* Navigation Styles */
@@ -133,7 +129,6 @@ nav ul li a.active {
     color: #007bff;
     border-bottom: 2px solid #007bff;
 }
-
 
 footer {
     background-color: #333;
