@@ -67,41 +67,23 @@ body {
 }
 
 /* Header, Footer, and Other Sections */
-/* Header, Footer, and Other Sections */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
     display: flex; /* Use flexbox to arrange children */
     justify-content: space-between; /* Distribute space between children */
     align-items: center; /* Center items vertically */
+    padding: 10px 20px;
 }
 
-/* Logo and Motto Container - Right Side */
-.logo-container {
-    display: flex; /* Arrange logo and motto in a row */
-    align-items: center; /* Center items vertically */
-}
-
-.logo img {
-    max-height: 90px; /* Adjust this value as needed */
-}
-
-.motto {
-    display: flex;
-    flex-direction: column; /* Arrange text in a column */
-    margin-left: 15px; /* Adjust spacing between logo and motto */
-}
-
-.motto p {
-    font-size: 1rem; /* Adjust font size as needed */
-    color: #fff; /* Adjust color as needed */
-    margin: 0; /* Remove default margin */
+/* Left empty space to push nav to center */
+.header-left {
+    flex: 1; /* Takes up available space */
 }
 
 /* Navigation - Center */
 nav {
-    flex-grow: 1; /* Allow nav to grow and occupy the center space */
+    flex: 2; /* Adjust size to make it centered */
     text-align: center; /* Center the navigation items */
 }
 
@@ -127,10 +109,24 @@ nav ul li a.active {
     border-bottom: 2px solid #007bff;
 }
 
-/* Adjust page container to account for the sidebar */
-.page-container {
-    margin-left: 200px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
-    width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
+/* Logo and Motto Container - Right Side */
+.logo-container {
+    display: flex; /* Arrange logo and motto in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    max-height: 90px; /* Adjust this value as needed */
+}
+
+.motto {
+    margin-left: 15px; /* Adjust spacing between logo and motto */
+}
+
+.motto p {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #fff; /* Adjust color as needed */
+    margin: 0; /* Remove default margin */
 }
 
 footer {
