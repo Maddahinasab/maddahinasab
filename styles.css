@@ -73,6 +73,28 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between logo and navigation */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px; /* Adjust this value as needed */
+}
+
+.motto {
+    margin-left: 15px; /* Adjust spacing as needed */
+}
+
+.motto p {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #fff; /* Adjust color as needed */
+    margin: 0; /* Remove default margin */
 }
 
 nav ul {
@@ -261,4 +283,3 @@ p {
 .publications-list li a:hover {
     text-decoration: underline; /* Underline on hover */
 }
-
