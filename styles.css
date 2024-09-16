@@ -92,12 +92,12 @@ header {
 }
 
 .logo img {
-    max-height: 100px; /* Adjust this value as needed */
-    margin-right: 10px; /* Space between the logo and the motto */
+    max-height: 120px; /* Adjust this value as needed */
+    margin-right: 5px; /* Space between the logo and the motto */
 }
 
 .motto {
-    font-size: 0.5rem; /* Adjust font size as needed */
+    font-size: 0.75rem; /* Adjust font size as needed */
     color: #fff; /* Adjust color as needed */
 }
 
