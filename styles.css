@@ -99,7 +99,7 @@ header {
 .motto {
     font-size: 0.75rem; /* Adjust font size as needed */
     color: #fff; /* Adjust color as needed */
-    padding-top: 30px;
+    padding-top: 60px;
 }
 
 /* Navigation Styles */
@@ -148,7 +148,7 @@ footer {
     background-repeat: no-repeat;
     color: #333;
     text-align: center;
-    padding: 400px 20px;
+    padding: 100px 600px;
     position: relative;
     width: 100%;
     height: 600px;
