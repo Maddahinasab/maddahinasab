@@ -67,19 +67,19 @@ body {
 }
 
 /* Header, Footer, and Other Sections */
+/* Header, Footer, and Other Sections */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
-    text-align: center;
     display: flex; /* Use flexbox to arrange children */
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: space-between; /* Distribute space between children */
     align-items: center; /* Center items vertically */
 }
 
-/* Logo and Motto Container */
+/* Logo and Motto Container - Right Side */
 .logo-container {
-    display: flex; /* Arrange children horizontally */
+    display: flex; /* Arrange logo and motto in a row */
     align-items: center; /* Center items vertically */
 }
 
@@ -89,8 +89,7 @@ header {
 
 .motto {
     display: flex;
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: center; /* Center motto text vertically next to the logo */
+    flex-direction: column; /* Arrange text in a column */
     margin-left: 15px; /* Adjust spacing between logo and motto */
 }
 
@@ -100,9 +99,16 @@ header {
     margin: 0; /* Remove default margin */
 }
 
+/* Navigation - Center */
+nav {
+    flex-grow: 1; /* Allow nav to grow and occupy the center space */
+    text-align: center; /* Center the navigation items */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
 nav ul li {
@@ -119,6 +125,12 @@ nav ul li a.active {
     font-weight: bold;
     color: #007bff;
     border-bottom: 2px solid #007bff;
+}
+
+/* Adjust page container to account for the sidebar */
+.page-container {
+    margin-left: 200px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
+    width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
 }
 
 footer {
