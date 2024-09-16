@@ -74,6 +74,15 @@ header {
     text-align: center;
 }
 
+.logo-container {
+    display: flex;
+    align-items: right;
+}
+
+.logo img {
+    max-height: 90px; /* Adjust this value as needed */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
