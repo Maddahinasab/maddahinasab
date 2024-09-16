@@ -99,6 +99,7 @@ header {
 .motto {
     font-size: 0.75rem; /* Adjust font size as needed */
     color: #fff; /* Adjust color as needed */
+    padding-top: 30px;
 }
 
 /* Navigation Styles */
