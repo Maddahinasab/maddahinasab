@@ -70,13 +70,17 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
+    display: flex; /* Use flexbox to arrange children */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
 }
 
+/* Logo and Motto Container */
 .logo-container {
-    display: flex;
-    align-items: left;
+    display: flex; /* Arrange children horizontally */
+    align-items: center; /* Center items vertically */
 }
 
 .logo img {
@@ -84,7 +88,10 @@ header {
 }
 
 .motto {
-    margin-left: 15px; /* Adjust spacing as needed */
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center motto text vertically next to the logo */
+    margin-left: 15px; /* Adjust spacing between logo and motto */
 }
 
 .motto p {
