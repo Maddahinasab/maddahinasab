@@ -71,11 +71,13 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 20px; /* Adjusted padding to prevent overlap */
     text-align: center;
     display: flex;
     align-items: center; /* Vertically center items */
     justify-content: space-between; /* Space between logo and navigation */
+    position: relative; /* Ensures header content is positioned correctly */
+    z-index: 999; /* Makes sure the header is above the content */
 }
 
 .logo-container {
