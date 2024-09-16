@@ -1,5 +1,4 @@
-/* Apply box-sizing globally */
-* {
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -67,57 +66,22 @@ body {
     margin-left: 200px; /* Ensures content starts after the sidebar */
 }
 
-/* Header Styles */
+/* Header, Footer, and Other Sections */
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0; /* Adjusted padding */
+    padding: 10px 0;
     text-align: center;
-    position: fixed; /* Ensure it stays fixed at the top */
-    top: 0;
-    left: 200px; /* Account for the sidebar width */
-    width: calc(100% - 200px); /* Full width minus sidebar */
-    z-index: 999; /* Ensures the header is above the content */
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
 }
 
-/* Logo Container */
-.logo-container {
-    display: flex;
-    align-items: center; /* Align logo and motto vertically */
-    justify-content: center; /* Center the whole container */
-    margin-bottom: 3px; /* Space between logo-motto and navigation */
-}
-
-.logo img {
-    max-height: 120px; /* Adjust this value as needed */
-    margin-right: 5px; /* Space between the logo and the motto */
-}
-
-.motto {
-    font-size: 0.90rem; /* Adjust font size as needed */
-    color: #fff; /* Adjust color as needed */
-    padding-top: 60px;
-}
-
-/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
-    display: flex; /* Align tabs horizontally */
-    justify-content: center; /* Center tabs */
-    flex-wrap: wrap; /* Wrap items if they don't fit in one line */
 }
 
 nav ul li {
+    display: inline;
     margin-right: 15px;
-}
-
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin from the last item */
 }
 
 nav ul li a {
@@ -148,10 +112,10 @@ footer {
     background-repeat: no-repeat;
     color: #333;
     text-align: center;
-    padding: 100px 600px;
+    padding: 100px 20px;
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 697px;
     overflow: hidden;
 }
 
