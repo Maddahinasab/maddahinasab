@@ -76,7 +76,7 @@ header {
 
 .logo-container {
     display: flex;
-    align-items: right;
+    align-items: left;
 }
 
 .logo img {
