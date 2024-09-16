@@ -76,10 +76,14 @@ header {
     display: flex;
     align-items: center; /* Vertically center items */
     justify-content: space-between; /* Space between logo and navigation */
-    position: relative; /* Ensures header content is positioned correctly */
-    z-index: 999; /* Makes sure the header is above the content */
+    position: fixed; /* Ensure it stays fixed at the top */
+    top: 0;
+    left: 200px; /* Account for the sidebar width */
+    width: calc(100% - 200px); /* Full width minus sidebar */
+    z-index: 999; /* Ensures the header is above the content */
 }
 
+/* Ensure logo container is correctly aligned */
 .logo-container {
     display: flex;
     align-items: center;
@@ -102,6 +106,7 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Ensure no extra margin */
 }
 
 nav ul li {
