@@ -74,6 +74,22 @@ header {
     text-align: center;
 }
 
+/* Style for the logo */
+header .logo {
+    text-align: center; /* Center the logo */
+    margin-bottom: 20px; /* Space between the logo and the navigation */
+}
+
+header .logo img {
+    max-width: 150px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the navigation */
+nav {
+    /* Add styles as needed */
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
