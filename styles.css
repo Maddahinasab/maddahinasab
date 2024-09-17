@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 30;
+    padding: 0;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
@@ -20,7 +20,7 @@ body {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
     padding: 20px;
-    width: 150px; /* Reduced width for the sidebar */
+    width: 200px; /* Fixed width for the sidebar */
     position: fixed; /* Sticks to the left side of the page */
     top: 0;
     left: 0;
@@ -56,14 +56,14 @@ body {
 
 /* Adjust page container to account for the sidebar */
 .page-container {
-    margin-left: 150px; /* Adjust margin to match the sidebar's new width */
-    width: calc(100% - 150px); /* Adjust width to fit next to the sidebar */
+    margin-left: 200px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
+    width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
 }
 
 /* Specific styles for the About Me Page */
 .about-content {
-    padding: 15px 60px 30px; /* Adds padding: 20px top, 40px left/right, 40px bottom */
-    margin-left: 150px; /* Ensures content starts after the sidebar */
+    padding: 20px 40px 40px; /* Adds padding: 20px top, 40px left/right, 40px bottom */
+    margin-left: 200px; /* Ensures content starts after the sidebar */
 }
 
 /* Header, Footer, and Other Sections */
@@ -72,28 +72,6 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-}
-
-/* Style for the logo */
-header .logo {
-    text-align: center; /* Center the logo */
-    margin-bottom: 0px; /* Space between the logo and the navigation */
-}
-
-header .logo img {
-    max-width: 60px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Style the header title */
-header h1 {
-    text-align: center; /* Center the title */
-    margin-bottom: 10px; /* Space between the title and navigation */
-    font-size: 24px; /* Adjust font size */
-
-/* Style for the navigation */
-nav {
-    /* Add styles as needed */
 }
 
 nav ul {
@@ -124,8 +102,6 @@ footer {
     padding: 10px 0;
     width: 100%;
     margin-top: auto;
-    position: relative; /* Ensure footer does not overlap with content */
-    clear: both; /* Clear floats if any */
 }
 
 /* Hero Section Styles */
@@ -136,12 +112,11 @@ footer {
     background-repeat: no-repeat;
     color: #333;
     text-align: center;
-    padding: 150px 0px;
+    padding: 100px 20px;
     position: relative;
     width: 100%;
-    height: 420px; /* Adjust height as needed */
+    height: 666px;
     overflow: hidden;
-    margin-top: 0px; /* Add some space at the top */
 }
 
 .hero::before {
@@ -161,7 +136,7 @@ footer {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
-    transform: translateY(200px); /* Moves only the text down */
+    transform: translateY(270px); /* Moves only the text down */
 }
 
 .hero h1, .hero h2, .hero p {
@@ -199,20 +174,15 @@ footer {
 }
 
 /* Styles for About, Publications, Law Career, Gallery, Media Pages */
-h1 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
 h2 {
     color: #333;
     margin-bottom: 20px;
-    padding: 30px;
+    padding-left: 30px;
 }
 
 p {
     margin-bottom: 15px;
-    padding: 30px;
+    padding-left: 30px;
 }
 
 .gallery {
@@ -231,7 +201,7 @@ p {
 
 .media-embed {
     margin: 20px 0;
-    padding: 30px;
+    padding-left: 30px;
     text-align: center;
 }
 
@@ -243,12 +213,11 @@ p {
 
 .datasets-page p {
     margin: 10px 0;
-    padding: 30px
 }
 
 .datasets-page ul {
     list-style-type: none;
-    padding: 30px;
+    padding: 0;
 }
 
 .datasets-page ul li {
