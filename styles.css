@@ -193,13 +193,21 @@ footer {
 }
 
 /* Styles for About, Publications, Law Career, Gallery, Media Pages */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
 h2 {
     color: #333;
     margin-bottom: 20px;
+    padding: 30px;
 }
 
 p {
     margin-bottom: 15px;
+    padding: 30px;
 }
 
 .gallery {
@@ -231,11 +239,12 @@ p {
 
 .datasets-page p {
     margin: 10px 0;
+    padding: 30px
 }
 
 .datasets-page ul {
     list-style-type: none;
-    padding: 30;
+    padding: 30px;
 }
 
 .datasets-page ul li {
