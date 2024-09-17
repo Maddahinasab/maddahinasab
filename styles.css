@@ -20,7 +20,7 @@ body {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
     padding: 20px;
-    width: 120px; /* Reduced width for the sidebar */
+    width: 150px; /* Reduced width for the sidebar */
     position: fixed; /* Sticks to the left side of the page */
     top: 0;
     left: 0;
