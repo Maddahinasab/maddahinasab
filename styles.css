@@ -77,7 +77,7 @@ header {
 /* Style for the logo */
 header .logo {
     text-align: center; /* Center the logo */
-    margin-bottom: 6px; /* Space between the logo and the navigation */
+    margin-bottom: 0px; /* Space between the logo and the navigation */
 }
 
 header .logo img {
