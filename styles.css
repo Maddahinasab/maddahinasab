@@ -85,6 +85,12 @@ header .logo img {
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Style the header title */
+header h1 {
+    text-align: center; /* Center the title */
+    margin-bottom: 10px; /* Space between the title and navigation */
+    font-size: 24px; /* Adjust font size */
+
 /* Style for the navigation */
 nav {
     /* Add styles as needed */
@@ -233,7 +239,6 @@ p {
 .datasets-page h1 {
     font-size: 2rem;
     margin-top: 20px;
-    padding: 30px;
 }
 
 .datasets-page p {
