@@ -87,6 +87,16 @@ body {
         padding-top: 20px; /* Add some top padding to avoid overlap */
     }
 }
+.mobile-nav {
+    justify-content: center;
+    align-items: center;
+    }
+    /* Style mobile nav links */
+.mobile-nav a {
+    margin: 0 15px; /* Space between icons */
+    text-decoration: none;
+    font-size: 2em; /* Increase size of icons */
+    }
 /* Specific styles for the About Me Page */
 .about-content {
     padding: 20px 40px 40px; /* Adds padding: 20px top, 40px left/right, 40px bottom */
