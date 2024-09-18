@@ -87,6 +87,29 @@ body {
         padding-top: 20px; /* Add some top padding to avoid overlap */
     }
 }
+/* Mobile Navigation Bar Styles */
+.mobile-nav {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    background-color: #333; /* Match background color if needed */
+    padding: 10px; /* Add padding for spacing */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Style mobile nav links */
+.mobile-nav a {
+    color: #fff; /* Text color */
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none;
+    font-size: 1.5em; /* Size of icons */
+}
+
+.mobile-nav a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
 
 /* Specific styles for the About Me Page */
 .about-content {
