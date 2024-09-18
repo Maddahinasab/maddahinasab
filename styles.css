@@ -270,18 +270,73 @@ p {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Reduce sidebar width for smaller screens */
     .sidebar {
-        width: 150px; /* Reduce width for smaller screens */
+        width: 150px;
     }
 
+    /* Adjust the main content width for smaller screens */
     .page-container {
-        margin-left: 150px; /* Adjust margin for smaller screens */
-        width: calc(100% - 150px); /* Adjust width */
+        margin-left: 150px;
+        width: calc(100% - 150px);
     }
-    
+
+    /* Adjust hero section for smaller screens */
     .hero {
-        width: 100%; /* Ensure full width */
-        margin-left: 0; /* Remove margin on smaller screens */
-        padding: 50px 10px; /* Adjust padding for smaller screens */
+        width: 100%;
+        margin-left: 0;
+        padding: 50px 10px;
+        min-height: 50vh; /* Adjust height to prevent overflow */
+        height: auto; /* Allow height to adjust dynamically */
+    }
+
+    /* Adjust hero content translation for smaller screens */
+    .hero-content {
+        transform: translateY(0); /* Reset Y translation */
+    }
+
+    /* Adjust hero text size for smaller screens */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero h2 {
+        font-size: 1.2em;
+    }
+
+    .hero p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce sidebar width for very small screens */
+    .sidebar {
+        width: 100px;
+    }
+
+    /* Adjust the main content width for very small screens */
+    .page-container {
+        margin-left: 100px;
+        width: calc(100% - 100px);
+    }
+
+    /* Adjust hero section for very small screens */
+    .hero {
+        padding: 30px 10px;
+        min-height: 40vh;
+    }
+
+    /* Adjust hero text size for very small screens */
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 1em;
+    }
+
+    .hero p {
+        font-size: 0.7em;
     }
 }
