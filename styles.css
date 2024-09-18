@@ -21,7 +21,7 @@ body {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
     padding: 20px;
-    width: 150px; /* Fixed width for the sidebar */
+    width: 180px; /* Fixed width for the sidebar */
     position: fixed; /* Sticks to the left side of the page */
     top: 0;
     left: 0;
@@ -36,25 +36,6 @@ body {
         transform: translateX(-100%); /* Hide the sidebar by sliding it to the left */
         width: 250px; /* Optional: Increase the width on mobile */
     }
-}
-
-/* Show sidebar when active */
-.sidebar.active {
-    transform: translateX(0); /* Show the sidebar */
-}
-
-/* Add a button to toggle the sidebar on mobile devices */
-.toggle-sidebar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1100; /* Ensure the button stays above the sidebar */
-    display: none; /* Hide by default */
 }
 
 /* Display the toggle button on mobile devices */
@@ -143,61 +124,6 @@ footer {
 /* Main Section Styles */
 main {
     padding: 20px;
-}
-
-/* Hero Section Styles */
-.hero {
-    background-image: url('assets/images/hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-    width: 100%;
-    height: 666px;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
-    transform: translateY(270px); /* Moves only the text down */
-}
-
-.hero h1, .hero h2, .hero p {
-    margin: 0;
-    padding: 0;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin: 10px 0;
-}
-
-.hero h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.hero p {
-    font-size: 0.9em;
-    margin: 20px 0;
 }
 
 .cta-button {
