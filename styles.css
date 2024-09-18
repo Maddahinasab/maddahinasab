@@ -170,6 +170,24 @@ p {
     padding-left: 30px;
 }
 
+/* Centering text within the homepage */
+.homepage {
+    text-align: center;
+    padding: 20px; /* Optional: Adds padding around the content */
+}
+
+/* Centering the heading tags and button */
+.homepage h1, 
+.homepage h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.homepage .cta-button {
+    display: inline-block; /* Makes the button's width fit its content */
+    margin-top: 20px; /* Adds space above the button */
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
