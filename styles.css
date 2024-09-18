@@ -21,13 +21,38 @@ body {
     background-color: #333; /* Matches header and footer color */
     color: #fff;
     padding: 20px;
-    width: 180px; /* Fixed width for the sidebar */
+    width: 200px; /* Fixed width for the sidebar */
     position: fixed; /* Sticks to the left side of the page */
     top: 0;
     left: 0;
     height: 100vh; /* Full height of the viewport */
     z-index: 1000; /* Ensures it stays above the main content */
-    transition: transform 0.3s ease; /* Smooth transition for sliding */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px; /* Space between links */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+}
+
+.sidebar ul li i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    display: block; /* Makes the entire list item clickable */
+}
+
+.sidebar ul li a:hover {
+    color: #007bff; /* Highlight color on hover */
 }
 
 /* Hide sidebar on mobile devices by default */
@@ -35,13 +60,6 @@ body {
     .sidebar {
         transform: translateX(-100%); /* Hide the sidebar by sliding it to the left */
         width: 250px; /* Optional: Increase the width on mobile */
-    }
-}
-
-/* Display the toggle button on mobile devices */
-@media (max-width: 768px) {
-    .toggle-sidebar {
-        display: block; /* Show the toggle button */
     }
 }
 
