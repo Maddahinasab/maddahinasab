@@ -1,4 +1,4 @@
-/* Global Reset */
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
@@ -59,10 +61,37 @@ body {
     width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
 }
 
+/* Responsive Sidebar - Mobile Devices */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on mobile */
+        height: auto; /* Height adjusts to content */
+        position: relative; /* Remove fixed position on mobile */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .sidebar ul li {
+        margin-bottom: 10px; /* Reduce spacing */
+    }
+
+    .page-container {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width for main content */
+        padding-top: 20px; /* Add some top padding to avoid overlap */
+    }
+}
+
 /* Specific styles for the About Me Page */
 .about-content {
     padding: 20px 40px 40px; /* Adds padding: 20px top, 40px left/right, 40px bottom */
     margin-left: 200px; /* Ensures content starts after the sidebar */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        margin-left: 0; /* Remove margin on mobile */
+        padding: 20px; /* Adjust padding */
+    }
 }
 
 /* Header, Footer, and Other Sections */
@@ -101,6 +130,66 @@ footer {
     padding: 10px 0;
     width: 100%;
     margin-top: auto;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('assets/images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    width: 100%;
+    height: 666px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    transform: translateY(270px); /* Moves only the text down */
+}
+
+.hero h1, .hero h2, .hero p {
+    margin: 0;
+    padding: 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 0.9em;
+    margin: 20px 0;
 }
 
 .cta-button {
@@ -206,77 +295,4 @@ p {
 
 .publications-list li a:hover {
     text-decoration: underline; /* Underline on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    /* Reduce sidebar width for smaller screens */
-    .sidebar {
-        width: 150px;
-    }
-
-    /* Adjust the main content width for smaller screens */
-    .page-container {
-        margin-left: 150px;
-        width: calc(100% - 150px);
-    }
-
-    /* Adjust hero section for smaller screens */
-    .hero {
-        width: 100%;
-        margin-left: 0;
-        padding: 50px 10px;
-        min-height: 50vh; /* Adjust height to prevent overflow */
-        height: auto; /* Allow height to adjust dynamically */
-    }
-
-    /* Adjust hero content translation for smaller screens */
-    .hero-content {
-        transform: translateY(0); /* Reset Y translation */
-    }
-
-    /* Adjust hero text size for smaller screens */
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero h2 {
-        font-size: 1.2em;
-    }
-
-    .hero p {
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further reduce sidebar width for very small screens */
-    .sidebar {
-        width: 100px;
-    }
-
-    /* Adjust the main content width for very small screens */
-    .page-container {
-        margin-left: 100px;
-        width: calc(100% - 100px);
-    }
-
-    /* Adjust hero section for very small screens */
-    .hero {
-        padding: 30px 10px;
-        min-height: 40vh;
-    }
-
-    /* Adjust hero text size for very small screens */
-    .hero h1 {
-        font-size: 1.5em;
-    }
-
-    .hero h2 {
-        font-size: 1em;
-    }
-
-    .hero p {
-        font-size: 0.7em;
-    }
 }
