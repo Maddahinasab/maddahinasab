@@ -98,11 +98,8 @@ body {
     .mobile-nav {
         display: flex; /* Show on small screens */
         justify-content: center; /* Center the icons */
-        background-color: #333; /* Optional: add background color */
         padding: 10px; /* Optional: add padding */
-        position: fixed; /* Fix to the bottom if you want it like a mobile navbar */
         width: 100%;
-        bottom: 0; /* Fix to the bottom of the screen */
         z-index: 1000; /* Ensure it stays on top */
     }
 
