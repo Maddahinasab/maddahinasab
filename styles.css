@@ -27,32 +27,41 @@ body {
     left: 0;
     height: 100vh; /* Full height of the viewport */
     z-index: 1000; /* Ensures it stays above the main content */
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
+/* Hide sidebar on mobile devices by default */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%); /* Hide the sidebar by sliding it to the left */
+        width: 250px; /* Optional: Increase the width on mobile */
+    }
 }
 
-.sidebar ul li {
-    margin-bottom: 15px; /* Space between links */
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Vertically center items */
+/* Show sidebar when active */
+.sidebar.active {
+    transform: translateX(0); /* Show the sidebar */
 }
 
-.sidebar ul li i {
-    margin-right: 10px; /* Space between icon and text */
-}
-
-.sidebar ul li a {
+/* Add a button to toggle the sidebar on mobile devices */
+.toggle-sidebar {
+    background-color: #333;
     color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    display: block; /* Makes the entire list item clickable */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100; /* Ensure the button stays above the sidebar */
+    display: none; /* Hide by default */
 }
 
-.sidebar ul li a:hover {
-    color: #007bff; /* Highlight color on hover */
+/* Display the toggle button on mobile devices */
+@media (max-width: 768px) {
+    .toggle-sidebar {
+        display: block; /* Show the toggle button */
+    }
 }
 
 /* Adjust page container to account for the sidebar */
@@ -63,11 +72,10 @@ body {
 
 /* Responsive Sidebar - Mobile Devices */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* Sidebar takes full width on mobile */
-        height: auto; /* Height adjusts to content */
-        position: relative; /* Remove fixed position on mobile */
-        padding: 10px; /* Reduce padding */
+    .page-container {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width for main content */
+        padding-top: 20px; /* Add some top padding to avoid overlap */
     }
 
     .sidebar ul li {
