@@ -21,6 +21,33 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
+}
+
+/* =========================
+   SUBTLE LOGO WATERMARK
+   (INNER PAGES ONLY)
+========================= */
+
+body:not(.homepage-body)::before {
+    content: "";
+    position: fixed;
+    top: 140px;
+    right: 70px;
+    width: 420px;
+    height: 420px;
+
+    background-image: url('assets/images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    opacity: 0.035;
+
+    /* Makes navy logo pale and elegant */
+    filter: grayscale(1) brightness(2.5);
+
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* =========================
@@ -33,6 +60,8 @@ header {
     text-align: center;
     padding: 20px 0;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 100;
 }
 
 header h1 {
@@ -124,6 +153,8 @@ nav ul li a.active {
     width: calc(100% - 200px);
     max-width: 1050px;
     padding: 50px 60px;
+    position: relative;
+    z-index: 1;
 }
 
 main {
@@ -306,6 +337,43 @@ li {
 }
 
 /* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-section {
+    max-width: 750px;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 22px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1f2937;
+}
+
+/* =========================
    MOBILE NAVIGATION
 ========================= */
 
@@ -325,6 +393,8 @@ footer {
     margin-top: auto;
     width: 100%;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 100;
 }
 
 /* =========================
@@ -332,6 +402,14 @@ footer {
 ========================= */
 
 @media (max-width: 768px) {
+
+    body::before {
+        width: 220px;
+        height: 220px;
+        top: 120px;
+        right: 10px;
+        opacity: 0.025;
+    }
 
     .sidebar {
         display: none;
