@@ -1,270 +1,303 @@
-/* Reset */
+/* =========================
+   RESET
+========================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* =========================
+   GLOBAL
+========================= */
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #fcfcfb;
+    color: #2c2c2c;
+    line-height: 1.8;
+    overflow-x: hidden;
     display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    min-height: 100vh; /* Minimum height of viewport */
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Sidebar Styles - Specific to Homepage */
-.sidebar {
-    background-color: #333; /* Matches header and footer color */
-    color: #fff;
-    padding: 20px;
-    width: 200px; /* Fixed width for the sidebar */
-    position: fixed; /* Sticks to the left side of the page */
-    top: 0;
-    left: 0;
-    height: 100vh; /* Full height of the viewport */
-    z-index: 1000; /* Ensures it stays above the main content */
-}
+/* =========================
+   HEADER
+========================= */
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 15px; /* Space between links */
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Vertically center items */
-}
-
-.sidebar ul li i {
-    margin-right: 10px; /* Space between icon and text */
-}
-
-.sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    display: block; /* Makes the entire list item clickable */
-}
-
-.sidebar ul li a:hover {
-    color: #007bff; /* Highlight color on hover */
-}
-
-/* Hide sidebar on mobile devices by default */
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%); /* Hide the sidebar by sliding it to the left */
-        width: 250px; /* Optional: Increase the width on mobile */
-    }
-}
-
-/* Adjust page container to account for the sidebar */
-.page-container {
-    margin-left: 200px; /* Adds margin to the left of the main content to avoid overlap with the sidebar */
-    width: calc(100% - 200px); /* Adjusts width to fit next to the sidebar */
-}
-
-/* Responsive Sidebar - Mobile Devices */
-@media (max-width: 768px) {
-    .page-container {
-        margin-left: 0; /* Remove left margin */
-        width: 100%; /* Full width for main content */
-        padding-top: 20px; /* Add some top padding to avoid overlap */
-    }
-
-    .sidebar ul li {
-        margin-bottom: 10px; /* Reduce spacing */
-    }
-
-    .page-container {
-        margin-left: 0; /* Remove left margin */
-        width: 100%; /* Full width for main content */
-        padding-top: 20px; /* Add some top padding to avoid overlap */
-    }
-}
-
-/* Hide mobile-nav by default */
-.mobile-nav {
-    display: none; /* Hide on large screens */
-}
-
-/* Show mobile-nav on small screens */
-@media (max-width: 768px) {
-    .mobile-nav {
-        display: flex; /* Show on small screens */
-        justify-content: center; /* Center the icons */
-        padding: 10px; /* Optional: add padding */
-        width: 100%;
-        z-index: 1000; /* Ensure it stays on top */
-    }
-
-    .mobile-nav a {
-        margin: 0 10px; /* Add spacing between icons */
-    }
-}
-
-/* Specific styles for the About Me Page */
-.about-content {
-    padding: 20px 40px 40px; /* Adds padding: 20px top, 40px left/right, 40px bottom */
-    margin-left: 200px; /* Ensures content starts after the sidebar */
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        margin-left: 0; /* Remove margin on mobile */
-        padding: 20px; /* Adjust padding */
-    }
-}
-
-/* Header, Footer, and Other Sections */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #1f2937;
+    color: #ffffff;
     text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    margin-top: 10px;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin: 0 14px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.4px;
+    transition: opacity 0.2s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.75;
 }
 
 nav ul li a.active {
-    font-weight: bold;
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #ffffff;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    margin-top: auto;
-}
-/* Centering text within the homepage */
-.homepage {
-    text-align: center;
-    padding: 20px; /* Optional: Adds padding around the content */
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 30px 20px;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
 }
 
-/* Centering the heading tags and button */
-.homepage h1, 
-.homepage h2 {
-    margin: 0;
-    padding: 10px 0;
+.sidebar ul {
+    list-style: none;
 }
 
-.homepage .cta-button {
-    display: inline-block; /* Makes the button's width fit its content */
-    margin-top: 20px; /* Adds space above the button */
+.sidebar ul li {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
 }
-/* Main Section Styles */
+
+.sidebar ul li i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.sidebar ul li a {
+    color: #d6d6d6;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.page-container,
+.main-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    max-width: 1050px;
+    padding: 50px 60px;
+}
+
 main {
     padding: 20px;
 }
 
-.cta-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+section {
+    margin-bottom: 75px;
 }
 
-.cta-button:hover {
-    background-color: #0056b3;
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
 }
 
-/* Styles for About, Publications, Law Career, Gallery, Media Pages */
 h2 {
-    color: #333;
-    margin-bottom: 20px;
-    padding-left: 0px;
+    color: #1f2937;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+h3 {
+    color: #243447;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
 }
 
 p {
-    margin-bottom: 15px;
-    padding-left: 30px;
+    margin-bottom: 22px;
+    max-width: 850px;
 }
 
-/* Centering text within the homepage */
+ul,
+ol {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   HOMEPAGE
+========================= */
+
 .homepage {
     text-align: center;
-    padding: 20px; /* Optional: Adds padding around the content */
+    padding-top: 100px;
 }
 
-/* Centering the heading tags and button */
-.homepage h1, 
+.homepage h1 {
+    font-size: 2.7rem;
+    margin-bottom: 15px;
+}
+
 .homepage h2 {
-    margin: 0;
-    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 30px;
 }
 
-.homepage .cta-button {
-    display: inline-block; /* Makes the button's width fit its content */
-    margin-top: 20px; /* Adds space above the button */
+/* =========================
+   BUTTONS
+========================= */
+
+.cta-button {
+    background-color: #1f2937;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.25s ease;
 }
+
+.cta-button:hover {
+    background-color: #111827;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-content {
+    padding: 20px;
+}
+
+.portrait {
+    display: block;
+    max-width: 260px;
+    height: auto;
+    border-radius: 50%;
+    margin: 30px auto 45px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   PUBLICATIONS
+========================= */
+
+.publications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publications-list li {
+    margin-bottom: 22px;
+    line-height: 1.9;
+    padding: 18px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.publications-list li a {
+    text-decoration: none;
+    color: #1d4ed8;
+    font-weight: 500;
+}
+
+.publications-list li a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   GALLERY
+========================= */
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
 .gallery img {
-    margin: 10px;
-    width: 200px;
+    width: 220px;
     height: auto;
-    border: 3px solid #ddd;
-    border-radius: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
 }
 
+/* =========================
+   MEDIA
+========================= */
+
 .media-embed {
-    margin: 20px 0;
-    padding-left: 30px;
+    margin: 25px 0;
     text-align: center;
 }
 
-/* New Styles for the Datasets Page */
-.datasets-page h1 {
-    font-size: 2rem;
-    margin-top: 20px;
-}
-
-.datasets-page p {
-    margin: 10px 0;
-}
+/* =========================
+   DATASETS
+========================= */
 
 .datasets-page ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .datasets-page ul li {
-    margin: 5px 0;
+    margin-bottom: 10px;
 }
 
 .datasets-page ul li a {
-    color: #007bff;
+    color: #1d4ed8;
     text-decoration: none;
 }
 
@@ -272,33 +305,80 @@ p {
     text-decoration: underline;
 }
 
-/* Portrait Image on About Me Page */
-.portrait {
-    display: block;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px auto;
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.mobile-nav {
+    display: none;
 }
 
-/* Add padding and spacing to publication list items */
-.publications-list {
-    padding: 20px; /* Adds padding around the entire list */
-    margin: 0 20px; /* Adds margin around the list */
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #1f2937;
+    color: #d9d9d9;
+    text-align: center;
+    padding: 22px 0;
+    margin-top: auto;
+    width: 100%;
+    font-size: 0.9rem;
 }
 
-.publications-list li {
-    margin-bottom: 15px; /* Space between each list item */
-    line-height: 1.8; /* Increases line height for better readability */
-    padding: 10px; /* Adds padding inside each list item */
-    border-bottom: 1px solid #ddd; /* Adds a subtle border below each item for separation */
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-.publications-list li a {
-    text-decoration: none;
-    color: #007bff; /* Link color */
-}
+@media (max-width: 768px) {
 
-.publications-list li a:hover {
-    text-decoration: underline; /* Underline on hover */
+    .sidebar {
+        display: none;
+    }
+
+    .page-container,
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        padding: 15px;
+        background-color: #1f2937;
+    }
+
+    .mobile-nav a {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .homepage {
+        padding-top: 50px;
+    }
+
+    .homepage h1 {
+        font-size: 2rem;
+    }
+
+    .homepage h2 {
+        font-size: 1rem;
+    }
+
+    .portrait {
+        max-width: 180px;
+    }
 }
