@@ -1,121 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================
+LAW PAGE
+========================= */
 
-<title>Maddahinasab Legal Advisory</title>
+.section-kicker {
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: #3b82f6;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
 
-<link rel="stylesheet" href="styles.css">
+.law-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 40px 40px 36px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
 
-<link rel="icon" href="assets/images/favicon.ico">
+.hero-lead {
+    font-size: 1.12rem;
+    color: #4b5563;
+    line-height: 1.8;
+    max-width: 850px;
+    margin-bottom: 22px;
+}
 
-<meta name="description" content="Legal advisory, investment law, energy law, and transitional legal risk analysis by Mostapha Maddahinasab.">
-<link rel="canonical" href="https://maddahinasab.com/law.html">
-</head>
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 34px 34px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
 
-<body>
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
 
-<!-- HEADER -->
-<header>
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
 
-    <h1>Legal Advisory</h1>
+.service-item {
+    background: #f9fafb;
+    border: 1px solid #edf2f7;
+    border-radius: 12px;
+    padding: 22px 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="law.html">Legal Advisory</a></li>
-                <li><a href="team.html">Expert Network</a></li>
-                <li><a href="whitepapers.html">White Papers & Reports</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+.service-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
 
-</header>
+.service-item i {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    margin-bottom: 12px;
+    display: block;
+}
 
-<!-- MAIN -->
-<main class="page-container">
+.service-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
 
-<section class="card">
+.service-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.65;
+}
 
-    <h2>Strategic Legal Advisory Overview</h2>
+.styled-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+}
 
-    <p>
-        Maddahinasab Legal Advisory operates at the intersection of investment law, energy law, and transitional legal risk.
-        The focus is on institutionally complex environments where regulatory uncertainty, sanctions exposure, and legal volatility shape investment decisions.
-    </p>
+.styled-list li {
+    background: #f9fafb;
+    border: 1px solid #edf2f7;
+    border-radius: 10px;
+    padding: 14px 16px;
+    position: relative;
+    padding-left: 38px;
+    color: #374151;
+}
 
-</section>
+.styled-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: #3b82f6;
+    font-weight: 700;
+}
 
-<section class="card">
+@media (max-width: 768px) {
+    .law-hero,
+    .card {
+        padding: 26px 22px;
+    }
 
-    <h2>Core Areas of Expertise</h2>
-
-    <ul>
-        <li>International Investment Law</li>
-        <li>Energy & Transition Law</li>
-        <li>Oil & Gas Contractual Frameworks</li>
-        <li>Regulatory Risk Assessment</li>
-        <li>Transitional Legal Environments</li>
-        <li>Sanctions & Compliance Exposure</li>
-    </ul>
-
-</section>
-
-<section class="card">
-
-    <h2>Advisory White Paper</h2>
-
-    <h3>Iran Transitional Legal Risk Framework™</h3>
-
-    <p>
-        A structured methodology for assessing legal and institutional risk in transitional jurisdictions.
-    </p>
-
-    <p>
-        Covers:
-        regulatory instability, enforcement uncertainty, sanctions layering,
-        contractual survivability, and institutional continuity risk.
-    </p>
-
-    <a class="cta-button" href="assets/Advisory Publications/White Paper 1.pdf" target="_blank">
-        Download White Paper
-    </a>
-
-</section>
-
-<!-- NEW PREMIUM PLACEHOLDER SECTION -->
-<section class="card">
-
-    <h2>Scope of Advisory Services (Executive Framework)</h2>
-
-    <p>
-        This section will be developed into a formal PDF document outlining the full advisory architecture,
-        including methodologies, engagement models, and institutional risk frameworks.
-    </p>
-
-    <p>
-        It will define the operational structure of advisory services for:
-    </p>
-
-    <ul>
-        <li>Legal risk consulting</li>
-        <li>Investment entry assessment</li>
-        <li>Regulatory due diligence</li>
-        <li>Energy transition advisory</li>
-    </ul>
-
-    <p><em>Document forthcoming.</em></p>
-
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <p>&copy; 2026 Maddahinasab Legal Advisory</p>
-</footer>
-
-</body>
-</html>
+    .service-grid,
+    .styled-list {
+        grid-template-columns: 1fr;
+    }
+}
