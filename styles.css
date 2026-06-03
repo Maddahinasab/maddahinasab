@@ -37,7 +37,7 @@ body:not(.homepage-body)::before {
     width: 420px;
     height: 420px;
 
-    background-image: url('assets/images/logo.svg');
+    background-image: url('assets/images/logo2026.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -109,7 +109,7 @@ nav ul li a.active {
     background-color: #1f2937;
     color: #ffffff;
     padding: 30px 20px;
-    width: 200px;
+    width: 150px;
     position: fixed;
     top: 0;
     left: 0;
@@ -284,55 +284,6 @@ li {
 }
 
 .publications-list li a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.gallery img {
-    width: 220px;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-}
-
-/* =========================
-   MEDIA
-========================= */
-
-.media-embed {
-    margin: 25px 0;
-    text-align: center;
-}
-
-/* =========================
-   DATASETS
-========================= */
-
-.datasets-page ul {
-    list-style: none;
-    padding: 0;
-}
-
-.datasets-page ul li {
-    margin-bottom: 10px;
-}
-
-.datasets-page ul li a {
-    color: #1d4ed8;
-    text-decoration: none;
-}
-
-.datasets-page ul li a:hover {
     text-decoration: underline;
 }
 
