@@ -92,7 +92,6 @@ header {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Header logo for non-home pages */
 header .header-logo-container {
     display: flex;
     flex-direction: column;
@@ -323,7 +322,7 @@ body.homepage-body .hero-text {
 }
 
 body.homepage-body .profile-photo-container {
-    order: 2;
+    order: 0;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -811,6 +810,11 @@ MOBILE / RESPONSIVE
 
     body.homepage-body .profile-photo-container {
         justify-content: center;
+        order: 0;
+    }
+
+    body.homepage-body .hero-text {
+        order: 1;
     }
 
     body.homepage-body .trust-badges,
