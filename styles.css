@@ -953,3 +953,45 @@ MOBILE / RESPONSIVE
         font-size: 0.95rem;
     }
 }
+/* =========================
+HOMEPAGE SIDEBAR OFFSET FIX
+========================= */
+
+body.homepage-body .sidebar {
+    width: 220px;
+}
+
+body.homepage-body .page-container,
+body.homepage-body .main-content,
+body.homepage-body .homepage {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    max-width: none;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+body.homepage-body .hero-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body.homepage-body .hero-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    body.homepage-body .sidebar {
+        display: none;
+    }
+
+    body.homepage-body .page-container,
+    body.homepage-body .main-content,
+    body.homepage-body .homepage {
+        margin-left: 0;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
