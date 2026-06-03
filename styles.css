@@ -1253,3 +1253,138 @@ LAW PAGE
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+HOMEPAGE FIX OVERRIDES
+========================= */
+
+body.homepage-body .page-container {
+    margin-left: 0;
+    width: 100%;
+    max-width: 1280px;
+    padding: 40px 28px 60px;
+    overflow-x: hidden;
+}
+
+body.homepage-body .homepage {
+    padding-top: 22px;
+}
+
+body.homepage-body .hero-section {
+    padding: 44px 44px 38px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+body.homepage-body .hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    gap: 30px;
+    align-items: start;
+}
+
+body.homepage-body .hero-text {
+    order: 1;
+    max-width: 760px;
+}
+
+body.homepage-body .profile-photo-container {
+    order: 2;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 4px;
+}
+
+body.homepage-body .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+body.homepage-body .photo-border {
+    display: none;
+}
+
+body.homepage-body .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.18;
+    margin-bottom: 12px;
+    max-width: 660px;
+}
+
+body.homepage-body .professional-tagline {
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+body.homepage-body .hero-subtitle {
+    max-width: 620px;
+    margin-bottom: 22px;
+    font-size: 1.02rem;
+}
+
+body.homepage-body .trust-badges {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+}
+
+body.homepage-body .cta-group {
+    justify-content: flex-start;
+}
+
+body.homepage-body .sidebar {
+    width: 238px;
+}
+
+body.homepage-body .page-container,
+body.homepage-body .homepage {
+    margin-left: 238px;
+    width: calc(100% - 238px);
+}
+
+@media (max-width: 1024px) {
+    body.homepage-body .page-container,
+    body.homepage-body .homepage {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    body.homepage-body .hero-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    body.homepage-body .profile-photo-container {
+        justify-content: center;
+    }
+
+    body.homepage-body .trust-badges,
+    body.homepage-body .cta-group {
+        justify-content: center;
+    }
+
+    body.homepage-body .hero-title,
+    body.homepage-body .hero-subtitle {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    body.homepage-body .hero-section {
+        padding: 34px 22px;
+    }
+
+    body.homepage-body .profile-photo {
+        width: 145px;
+        height: 145px;
+    }
+
+    body.homepage-body .hero-title {
+        font-size: 1.75rem;
+    }
+
+    body.homepage-body .hero-subtitle {
+        font-size: 0.98rem;
+    }
+}
