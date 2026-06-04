@@ -392,11 +392,36 @@ body.homepage-body .hero-text {
 
 body.homepage-body .profile-photo-container {
     order: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-top: 4px;
     position: relative;
+    width: 100%;
+    min-height: 340px;
+    display: block;
+    padding-top: 4px;
+}
+
+body.homepage-body .profile-cover {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border: 1px solid rgba(229,231,235,0.9);
+}
+
+body.homepage-body .profile-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+body.homepage-body .profile-photo-wrap {
+    position: absolute;
+    left: 26px;
+    bottom: -54px;
+    z-index: 2;
 }
 
 body.homepage-body .profile-photo {
@@ -404,8 +429,9 @@ body.homepage-body .profile-photo {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ffffff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+    background: #ffffff;
 }
 
 body.homepage-body .photo-border {
@@ -890,6 +916,16 @@ MOBILE / RESPONSIVE
         order: 0;
     }
 
+    body.homepage-body .profile-cover {
+        height: 200px;
+    }
+
+    body.homepage-body .profile-photo-wrap {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -54px;
+    }
+
     body.homepage-body .hero-text {
         order: 1;
     }
@@ -933,9 +969,24 @@ MOBILE / RESPONSIVE
         padding: 34px 22px;
     }
 
+    body.homepage-body .profile-photo-container {
+        min-height: 260px;
+        justify-content: center;
+    }
+
+    body.homepage-body .profile-cover {
+        height: 170px;
+    }
+
     body.homepage-body .profile-photo {
-        width: 145px;
-        height: 145px;
+        width: 130px;
+        height: 130px;
+    }
+
+    body.homepage-body .profile-photo-wrap {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -42px;
     }
 
     body.homepage-body .hero-title {
