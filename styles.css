@@ -385,27 +385,26 @@ body.homepage-body .profile-photo-container {
 }
 
 body.homepage-body .profile-cover {
-    position: relative;
     width: 100%;
     height: 300px;
-    border-radius: 18px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    border: 1px solid rgba(229,231,235,0.9);
+    border-radius: 18px 18px 0 0;
 }
 
 body.homepage-body .profile-cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center top;
     display: block;
 }
 
 body.homepage-body .profile-photo-wrap {
     position: absolute;
     left: 26px;
-    bottom: -40px;
+    bottom: -30px;
     z-index: 2;
 }
 
