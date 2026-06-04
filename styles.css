@@ -355,7 +355,7 @@ body.homepage-body .homepage {
 body.homepage-body .hero-section {
     background: linear-gradient(135deg, #fafafa 0%, #f3f4f6 100%);
     border-radius: 18px;
-    padding: 44px 44px 38px;
+    padding: 32px 44px 38px;
     margin-bottom: 40px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     position: relative;
@@ -376,33 +376,18 @@ body.homepage-body .hero-section::before {
     z-index: 0;
 }
 
-body.homepage-body .hero-content {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
-    gap: 30px;
-    align-items: start;
-}
-
-body.homepage-body .hero-text {
-    order: 1;
-    max-width: 760px;
-}
-
 body.homepage-body .profile-photo-container {
-    order: 0;
     position: relative;
     width: 100%;
-    min-height: 340px;
-    display: block;
-    padding-top: 4px;
+    min-height: 360px;
+    margin-bottom: 24px;
+    z-index: 1;
 }
 
 body.homepage-body .profile-cover {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 300px;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
@@ -420,16 +405,16 @@ body.homepage-body .profile-cover-image {
 body.homepage-body .profile-photo-wrap {
     position: absolute;
     left: 26px;
-    bottom: -54px;
+    bottom: -72px;
     z-index: 2;
 }
 
 body.homepage-body .profile-photo {
-    width: 180px;
-    height: 180px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #ffffff;
+    border: 6px solid #ffffff;
     box-shadow: 0 10px 28px rgba(0,0,0,0.18);
     background: #ffffff;
 }
@@ -438,13 +423,25 @@ body.homepage-body .photo-border {
     display: none;
 }
 
+body.homepage-body .hero-content {
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 860px;
+    padding-top: 12px;
+}
+
+body.homepage-body .hero-text {
+    max-width: 860px;
+}
+
 body.homepage-body .hero-title {
     font-size: 2.15rem;
     font-weight: 700;
     color: #1f2937;
     line-height: 1.18;
     margin-bottom: 12px;
-    max-width: 660px;
+    max-width: 760px;
 }
 
 body.homepage-body .professional-tagline {
@@ -462,7 +459,7 @@ body.homepage-body .hero-subtitle {
     color: #4b5563;
     line-height: 1.75;
     margin-bottom: 22px;
-    max-width: 620px;
+    max-width: 760px;
 }
 
 body.homepage-body .trust-badges {
@@ -906,47 +903,40 @@ MOBILE / RESPONSIVE
 ========================= */
 
 @media (max-width: 1024px) {
-    body.homepage-body .hero-content {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    body.homepage-body .profile-photo-container {
-        justify-content: center;
-        order: 0;
-    }
-
-    body.homepage-body .profile-cover {
-        height: 200px;
-    }
-
-    body.homepage-body .profile-photo-wrap {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -54px;
-    }
-
-    body.homepage-body .hero-text {
-        order: 1;
-    }
-
-    body.homepage-body .trust-badges,
-    body.homepage-body .cta-group {
-        justify-content: center;
-    }
-
-    body.homepage-body .hero-title,
-    body.homepage-body .hero-subtitle {
-        max-width: 100%;
-        text-align: center;
-    }
-
     body.homepage-body .page-container,
     body.homepage-body .main-content,
     body.homepage-body .homepage {
         margin-left: 0;
         width: 100%;
         max-width: 100%;
+    }
+
+    body.homepage-body .hero-section {
+        padding: 30px 24px 34px;
+    }
+
+    body.homepage-body .profile-photo-container {
+        min-height: 300px;
+        margin-bottom: 18px;
+    }
+
+    body.homepage-body .profile-cover {
+        height: 240px;
+    }
+
+    body.homepage-body .profile-photo-wrap {
+        left: 20px;
+        bottom: -58px;
+    }
+
+    body.homepage-body .hero-title,
+    body.homepage-body .hero-subtitle {
+        max-width: 100%;
+    }
+
+    body.homepage-body .trust-badges,
+    body.homepage-body .cta-group {
+        justify-content: flex-start;
     }
 }
 
@@ -966,27 +956,31 @@ MOBILE / RESPONSIVE
     }
 
     body.homepage-body .hero-section {
-        padding: 34px 22px;
+        padding: 24px 18px 28px;
     }
 
     body.homepage-body .profile-photo-container {
         min-height: 260px;
-        justify-content: center;
+        margin-bottom: 14px;
     }
 
     body.homepage-body .profile-cover {
-        height: 170px;
-    }
-
-    body.homepage-body .profile-photo {
-        width: 130px;
-        height: 130px;
+        height: 220px;
     }
 
     body.homepage-body .profile-photo-wrap {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -42px;
+        left: 16px;
+        bottom: -48px;
+    }
+
+    body.homepage-body .profile-photo {
+        width: 136px;
+        height: 136px;
+        border-width: 5px;
+    }
+
+    body.homepage-body .hero-content {
+        padding-top: 8px;
     }
 
     body.homepage-body .hero-title {
@@ -1017,11 +1011,11 @@ MOBILE / RESPONSIVE
     }
 
     body.homepage-body .about-section {
-        padding: 40px 28px;
+        padding: 34px 22px;
     }
 
     body.homepage-body .about-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
     }
 
     body.homepage-body .about-content p {
@@ -1064,9 +1058,22 @@ MOBILE / RESPONSIVE
 }
 
 @media (max-width: 480px) {
+    body.homepage-body .profile-photo-container {
+        min-height: 230px;
+    }
+
+    body.homepage-body .profile-cover {
+        height: 190px;
+    }
+
     body.homepage-body .profile-photo {
-        width: 100px;
-        height: 100px;
+        width: 108px;
+        height: 108px;
+    }
+
+    body.homepage-body .profile-photo-wrap {
+        left: 14px;
+        bottom: -36px;
     }
 
     h1 {
@@ -1074,7 +1081,7 @@ MOBILE / RESPONSIVE
     }
 
     body.homepage-body .hero-section {
-        padding: 28px 18px;
+        padding: 22px 16px 24px;
     }
 
     body.homepage-body .hero-title {
