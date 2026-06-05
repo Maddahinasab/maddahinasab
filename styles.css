@@ -318,6 +318,83 @@ BUTTONS
 }
 
 /* =========================
+CONTACT PAGE
+========================= */
+
+.contact-section {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.contact-section p {
+    max-width: 760px;
+}
+
+.contact-form {
+    max-width: 760px;
+    margin-top: 28px;
+    background: #ffffff;
+    padding: 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f2937;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #fff;
+    color: #111827;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.contact-form textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+
+.contact-form .cta-button.primary {
+    margin-top: 6px;
+}
+
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* =========================
 HOMEPAGE HERO
 ========================= */
 
