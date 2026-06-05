@@ -324,6 +324,7 @@ CONTACT PAGE
 .contact-section {
     max-width: 860px;
     margin: 0 auto;
+    background: transparent;
 }
 
 .contact-section p {
