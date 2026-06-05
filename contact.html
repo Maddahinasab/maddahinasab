@@ -7,11 +7,8 @@
     <title>Contact | Maddahinasab Legal Advisory</title>
 
     <meta name="description" content="Contact Maddahinasab Legal Advisory for legal consulting, investment risk assessment, academic collaboration, and advisory services.">
-
     <meta name="robots" content="index, follow">
-
     <meta name="keywords" content="contact legal advisory, investment law consulting, energy law advisor, transitional legal risk, legal expert contact">
-
     <link rel="canonical" href="https://maddahinasab.com/contact.html">
 
     <!-- Open Graph -->
@@ -30,7 +27,7 @@
     <link rel="icon" href="assets/images/favicon.ico">
 </head>
 
-<body>
+<body class="contact-page">
 
 <header>
     <div class="header-logo-container">
@@ -40,12 +37,12 @@
     <h1>Contact</h1>
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="law.html">Legal Advisory</a></li>
             <li><a href="team.html">Expert Network</a></li>
             <li><a href="whitepapers.html">White Papers & Reports</a></li>
             <li><a href="publications.html">Publications</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -62,7 +59,17 @@
         <form action="https://formspree.io/f/mkgwalel" method="POST" class="contact-form">
             <input type="hidden" name="_subject" value="New contact form message from Maddahinasab Legal Advisory">
             <input type="hidden" name="_next" value="https://maddahinasab.com/contact.html">
-            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="honeypot-wrap" aria-hidden="true">
+                <label for="website">Website</label>
+                <input
+                    type="text"
+                    id="website"
+                    name="_gotcha"
+                    tabindex="-1"
+                    autocomplete="off"
+                    spellcheck="false">
+            </div>
 
             <div class="form-group">
                 <label for="name">Name</label>
@@ -79,9 +86,7 @@
                 <textarea id="message" name="message" rows="7" placeholder="Write your message here..." required></textarea>
             </div>
 
-            <button type="submit" class="cta-button primary">
-                Send Message
-            </button>
+            <button type="submit" class="cta-button primary">Send Message</button>
         </form>
     </section>
 </main>
