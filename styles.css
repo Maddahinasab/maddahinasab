@@ -334,11 +334,11 @@ CONTACT PAGE
 .contact-form {
     max-width: 760px;
     margin-top: 28px;
-    background: #ffffff;
-    padding: 32px;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .form-group {
