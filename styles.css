@@ -322,13 +322,13 @@ CONTACT PAGE
 ========================= */
 
 .contact-section {
-    max-width: 860px;
+    max-width: 750px;
     margin: 0 auto;
     background: transparent;
 }
 
 .contact-section p {
-    max-width: 760px;
+    max-width: 600px;
 }
 
 .contact-form {
