@@ -16,7 +16,7 @@ html, body {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #fafafa;
+    background: #fafafa;
     color: #2c2c2c;
     line-height: 1.7;
     display: flex;
@@ -30,6 +30,10 @@ img {
     display: block;
 }
 
+a {
+    color: inherit;
+}
+
 /* =========================
 BASE LAYOUT
 ========================= */
@@ -39,22 +43,19 @@ header, footer {
 }
 
 .page-container,
-.main-content {
-    margin-left: 200px;
-    width: calc(100% - 200px);
-    max-width: 1100px;
-    padding: 50px 60px;
-    margin-right: auto;
-    margin-left: auto;
+.main-content,
+.homepage {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 48px 0 56px;
 }
 
 body.homepage-body .page-container,
 body.homepage-body .main-content,
 body.homepage-body .homepage {
-    margin-left: 220px;
-    width: calc(100% - 220px);
-    max-width: none;
-    padding: 40px 28px 60px;
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 36px 0 56px;
 }
 
 /* =========================
@@ -99,14 +100,12 @@ header .header-logo-container {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
-    padding: 0;
 }
 
 header .header-logo-container img {
     width: 44px;
     max-width: 44px;
     height: auto;
-    display: block;
     filter: brightness(0) invert(1);
     opacity: 0.95;
 }
@@ -127,6 +126,8 @@ NAVIGATION
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -896,8 +897,9 @@ TEAM PAGE
 
 .team-card img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: 240px;
     object-fit: cover;
+    object-position: center top;
     border-radius: 12px;
     margin-bottom: 14px;
     background: transparent;
@@ -932,6 +934,10 @@ TEAM PAGE
     .team-card {
         padding: 16px;
     }
+
+    .team-card img {
+        height: 220px;
+    }
 }
 
 /* =========================
@@ -958,9 +964,7 @@ MOBILE / RESPONSIVE
     body.homepage-body .page-container,
     body.homepage-body .main-content,
     body.homepage-body .homepage {
-        margin-left: 0;
-        width: 100%;
-        max-width: 100%;
+        width: min(100%, calc(100% - 30px));
     }
 
     body.homepage-body .hero-section {
@@ -999,12 +1003,12 @@ MOBILE / RESPONSIVE
 
     .page-container,
     .main-content,
+    .homepage,
     body.homepage-body .page-container,
     body.homepage-body .main-content,
     body.homepage-body .homepage {
-        margin-left: 0;
-        width: 100%;
-        padding: 30px 20px;
+        width: min(100%, calc(100% - 24px));
+        padding: 28px 0;
     }
 
     body.homepage-body .hero-section {
