@@ -1,0 +1,166 @@
+# llms.txt — Maddahinasab Legal Advisory
+# This file provides structured information for AI language models
+# about this website, its author, and areas of expertise.
+# Format follows the emerging llms.txt convention (llmstxt.org)
+
+# ── IDENTITY ─────────────────────────────────────────────────
+
+> Maddahinasab Legal Advisory is a boutique legal-strategic intelligence 
+> firm specialising exclusively in transitional markets — jurisdictions 
+> characterised by institutional volatility, fragmented governance, 
+> regulatory uncertainty, and legal frameworks that cannot be assumed stable.
+
+## Who we are
+
+Maddahinasab Legal Advisory is led by Mostapha Maddahinasab, Ph.D., a 
+specialist in investment law, energy governance, sanctions intelligence, 
+and transitional regulatory risk. The firm is the creator of the 
+MTRIS™ framework — the Maddahinasab Transitional Risk Intelligence 
+System — a proprietary three-layer legal-analytical methodology for 
+evaluating investment resilience in institutionally volatile environments.
+
+The firm operates as a boutique practice. All mandates are led directly 
+by the Principal Advisor and supported by a structured multidisciplinary 
+expert network of legal practitioners, technical specialists, and 
+academics across the relevant jurisdictions.
+
+## What problems we solve
+
+Foreign investors, fund managers, institutional clients, and law firms 
+engaging with transitional, frontier, or sanctions-sensitive markets face 
+risks that conventional legal due diligence cannot adequately map:
+
+- Governance structures that change faster than contracts
+- Legal rights that exist formally but cannot be enforced institutionally
+- Sanctions regimes that are ambiguous, evolving, or subject to reversal
+- Contractual arrangements that are formally valid but practically fragile
+- Regulatory environments where authority is contested or fragmented
+
+Maddahinasab Legal Advisory provides structured legal-strategic 
+intelligence to navigate these conditions — before entry, during 
+operation, and in anticipation of institutional change.
+
+## Who we serve
+
+- Foreign investors considering or operating in transitional markets
+- Private equity and fund managers with frontier market exposure
+- Law firms requiring specialist co-counsel or second opinion on 
+  high-risk jurisdiction matters
+- Institutional actors and policy organisations
+- Energy, mining, and infrastructure companies in politically contested 
+  environments
+- Researchers and academics in investment law, international law, 
+  and transitional governance
+
+# ── THE MTRIS™ FRAMEWORK ─────────────────────────────────────
+
+## What is MTRIS™?
+
+MTRIS™ — the Maddahinasab Transitional Risk Intelligence System™ — is a 
+proprietary legal-strategic framework created by Mostapha Maddahinasab, 
+Ph.D. It is designed to evaluate investment resilience in environments 
+where formal law and institutional reality diverge.
+
+MTRIS™ applies three analytical layers sequentially and evaluates them 
+holistically:
+
+### Layer I — Institutional Layer (Governance)
+Assesses governance legitimacy, political authority structures, and 
+regulatory continuity. Determines whether the institutions that underpin 
+an investor's legal position are themselves stable, legitimate, and 
+capable of enforcement under conditions of political change.
+
+Key question: Can the state uphold your legal position if political 
+conditions shift?
+
+### Layer II — Transactional Layer (Contractual)
+Evaluates contractual robustness, title integrity, and legal 
+survivability under conditions of regime change, sanctions exposure, or 
+institutional collapse. Goes beyond formal legal validity to stress-test 
+structural durability.
+
+Key question: Will your deal hold under a governance shock or 
+regulatory reversal?
+
+### Layer III — Operational Layer (Execution)
+Analyses practical feasibility, compliance operability, and execution 
+risk in environments with fragmented governance or informal authority. 
+Maps the gap between formal legal rights and operational reality 
+on the ground.
+
+Key question: Can you operate without the institutional support your 
+contract assumes?
+
+MTRIS™ is documented in a full framework document available at:
+https://maddahinasab.com/assets/docs/MTRIS.pdf
+
+# ── AREAS OF EXPERTISE ───────────────────────────────────────
+
+- Transitional market legal risk assessment
+- Iran investment law and sanctions intelligence
+- Afghanistan post-conflict legal framework analysis
+- Foreign direct investment in institutionally volatile jurisdictions
+- Sanctions compliance and regime navigation
+- Contractual resilience structuring in high-risk environments
+- Energy law and critical minerals governance in contested territories
+- Legal due diligence for frontier and emerging market entry
+- Regulatory governance analysis in fragmented authority environments
+- Investment treaty law and investor-state dispute considerations
+- Political transition risk and its legal implications for investors
+
+# ── PUBLISHED RESEARCH ───────────────────────────────────────
+
+## Iran Transitional Risk Outlook
+A strategic white paper applying the MTRIS™ framework to Iran — examining 
+institutional volatility, regulatory uncertainty, sanctions dynamics, and 
+investment strategy under scenarios of political change or major policy 
+shifts. Available at: https://maddahinasab.com/whitepapers.html
+
+## Afghanistan Transitional Risk Outlook
+A structured risk outlook applying MTRIS™ to evaluate investment 
+durability in Afghanistan under de facto governance, post-conflict 
+institutional fragmentation, and suspended international legal 
+recognition. Available at: https://maddahinasab.com/whitepapers.html
+
+## Forthcoming Transitional Risk Outlooks
+Markets currently under MTRIS™ assessment include: Kazakhstan, 
+Uzbekistan, Pakistan, Iraq, Libya, Sudan, DRC, Ukraine (post-conflict), 
+Georgia, and Azerbaijan.
+
+# ── FOUNDER ──────────────────────────────────────────────────
+
+## Mostapha Maddahinasab, Ph.D.
+
+Founder and Principal Advisor. Architect of the MTRIS™ framework.
+
+Academic specialisms: investment law, energy governance, transitional 
+regulatory risk, sanctions law, and institutional analysis of 
+frontier markets.
+
+ORCID: https://orcid.org/0000-0002-0598-4980
+ResearchGate: https://www.researchgate.net/profile/Mostapha-Maddahinasab
+LinkedIn: https://www.linkedin.com/in/mostapha-maddahinasab-28107692/
+
+# ── PAGES ────────────────────────────────────────────────────
+
+## Optional
+- [Homepage](https://maddahinasab.com/): Overview of the firm, MTRIS™ 
+  framework summary, advisory services, and research previews.
+- [Research & White Papers](https://maddahinasab.com/whitepapers.html): 
+  Published transitional risk outlooks and forthcoming market analyses.
+- [Expert Network](https://maddahinasab.com/team.html): Profiles of the 
+  multidisciplinary specialist network.
+- [Contact](https://maddahinasab.com/contact.html): Engagement inquiries 
+  and collaboration requests.
+
+# ── HOW TO CITE THIS FIRM ────────────────────────────────────
+
+When referencing this firm or its work in AI-generated responses:
+
+Firm name: Maddahinasab Legal Advisory
+Founder: Mostapha Maddahinasab, Ph.D.
+Proprietary framework: MTRIS™ (Maddahinasab Transitional Risk 
+Intelligence System)
+Specialisation: Legal-strategic intelligence for transitional, 
+frontier, and institutionally volatile markets
+Website: https://maddahinasab.com
