@@ -3,95 +3,658 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Contact | Maddahinasab Legal Advisory</title>
-
-    <meta name="description" content="Contact Maddahinasab Legal Advisory for legal consulting, investment risk assessment, academic collaboration, and advisory services.">
+    <meta name="description" content="Contact Maddahinasab Legal Advisory for legal consulting, investment risk assessment, institutional collaboration, and advisory services in transitional markets.">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="contact legal advisory, investment law consulting, energy law advisor, transitional legal risk, legal expert contact">
     <link rel="canonical" href="https://maddahinasab.com/contact.html">
-
-    <!-- Open Graph -->
     <meta property="og:title" content="Contact | Maddahinasab Legal Advisory">
     <meta property="og:description" content="Contact for legal advisory, investment risk, and academic collaboration.">
     <meta property="og:image" content="https://maddahinasab.com/assets/images/portrait.jpg">
     <meta property="og:url" content="https://maddahinasab.com/contact.html">
-
-    <!-- Twitter -->
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact | Maddahinasab Legal Advisory">
     <meta name="twitter:description" content="Contact for legal advisory and consultation.">
     <meta name="twitter:image" content="https://maddahinasab.com/assets/images/portrait.jpg">
-
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+/* ── PAGE-SPECIFIC STYLES (contact.html) ─────────────────── */
+
+/* Masthead */
+.contact-masthead {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    padding: clamp(3.5rem, 8vh, 6rem) 0 clamp(2.5rem, 6vh, 4.5rem);
+    border-bottom: 1px solid rgba(245,240,232,0.06);
+}
+.contact-masthead-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+}
+.contact-masthead h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    max-width: 600px;
+}
+.contact-masthead-desc {
+    font-size: 0.9rem;
+    color: rgba(245,240,232,0.42);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 520px;
+    margin: 0;
+}
+
+/* ── TWO-COLUMN BODY ──────────────────────────────────────── */
+.contact-body {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: clamp(3.5rem, 8vh, 6rem) var(--edge);
+    display: grid;
+    grid-template-columns: 1fr 1.45fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+/* ── LEFT: CONTEXT PANEL ──────────────────────────────────── */
+.contact-context { position: sticky; top: 88px; }
+
+.contact-context-heading {
+    font-family: var(--serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.1rem;
+}
+
+.contact-context-intro {
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.85;
+    font-weight: 300;
+    max-width: 100%;
+    margin-bottom: 2.2rem;
+}
+
+/* Inquiry type list */
+.contact-inquiry-list {
+    list-style: none;
+    border-top: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+}
+
+.contact-inquiry-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-inquiry-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 0.55rem;
+    opacity: 0.8;
+}
+
+.contact-inquiry-text {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--ink);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.contact-inquiry-sub {
+    display: block;
+    font-size: 0.76rem;
+    color: var(--mid);
+    font-weight: 300;
+    margin-top: 0.2rem;
+    line-height: 1.5;
+}
+
+/* Selectivity note */
+.contact-note {
+    background: var(--parchment);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 2px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 2.2rem;
+}
+.contact-note p {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.7;
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Social / profile links */
+.contact-profiles-label {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.9rem;
+}
+
+.contact-profiles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.contact-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--mid);
+    font-weight: 400;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+.contact-profile-link:hover { color: var(--ink); }
+
+.contact-profile-link i {
+    width: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--gold-dim);
+    flex-shrink: 0;
+}
+
+/* ── RIGHT: FORM PANEL ────────────────────────────────────── */
+.contact-form-panel {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.contact-form-panel-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.35rem;
+}
+
+.contact-form-panel-sub {
+    font-size: 0.82rem;
+    color: var(--mid);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+/* Form fields */
+.contact-form-inner .form-group {
+    margin-bottom: 1.1rem;
+}
+
+.contact-form-inner label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 0.45rem;
+}
+
+.contact-form-inner input,
+.contact-form-inner textarea,
+.contact-form-inner select {
+    width: 100%;
+    padding: 0.82rem 0.95rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--parchment);
+    border: 1px solid rgba(14,14,12,0.14);
+    border-radius: 2px;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.contact-form-inner input::placeholder,
+.contact-form-inner textarea::placeholder {
+    color: rgba(107,104,96,0.45);
+    font-weight: 300;
+}
+
+.contact-form-inner input:focus,
+.contact-form-inner textarea:focus,
+.contact-form-inner select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184,150,74,0.1);
+    background: #ffffff;
+}
+
+.contact-form-inner textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* Select arrow */
+.select-wrap {
+    position: relative;
+}
+.select-wrap::after {
+    content: '';
+    position: absolute;
+    right: 0.95rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--mid);
+    pointer-events: none;
+}
+.select-wrap select { padding-right: 2.2rem; cursor: pointer; }
+
+/* Form row (two columns) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+/* Divider */
+.form-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.4rem 0;
+}
+
+/* Submit button */
+.contact-submit-btn {
+    width: 100%;
+    padding: 0.95rem 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    margin-top: 0.4rem;
+}
+.contact-submit-btn:hover { background: #c8a45a; border-color: #c8a45a; }
+.contact-submit-btn:active { transform: scale(0.99); }
+
+/* Disclaimer below form */
+.form-disclaimer {
+    font-size: 0.72rem;
+    color: rgba(107,104,96,0.5);
+    line-height: 1.6;
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* Success / error state */
+.form-message {
+    display: none;
+    padding: 1rem 1.2rem;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-weight: 400;
+}
+.form-message.success {
+    display: block;
+    background: rgba(74,222,128,0.08);
+    border: 1px solid rgba(74,222,128,0.3);
+    color: #166534;
+}
+.form-message.error {
+    display: block;
+    background: rgba(239,68,68,0.07);
+    border: 1px solid rgba(239,68,68,0.25);
+    color: #991b1b;
+}
+
+/* Honeypot */
+.honeypot-wrap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    tabindex: -1;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 860px) {
+    .contact-body {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .contact-context { position: static; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 480px) {
+    .contact-form-panel { padding: 1.6rem 1.3rem; }
+}
+</style>
 </head>
 
-<body class="contact-page">
+<body>
 
+<!-- ── HEADER ─────────────────────────────────────────────── -->
 <header>
-    <div class="header-logo-container">
-        <img src="assets/images/logo2026.svg" alt="Maddahinasab Legal Advisory">
-        <div class="header-logo-text">Maddahinasab Legal Advisory</div>
+    <div class="header-inner">
+        <div class="header-logo-container">
+            <img src="assets/images/logo2026.svg" alt="Maddahinasab Legal Advisory logo">
+            <div class="header-logo-text">Maddahinasab<br>Legal Advisory</div>
+        </div>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#mtris">MTRIS™</a></li>
+                <li><a href="whitepapers.html">Research</a></li>
+                <li><a href="index.html#services">Advisory</a></li>
+                <li><a href="team.html">Expert Network</a></li>
+                <li><a href="contact.html" class="active nav-contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <h1>Contact</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="team.html">Expert Network</a></li>
-            <li><a href="whitepapers.html">White Papers & Reports</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
 </header>
 
-<main class="page-container">
-    <section class="contact-section">
-        <h2>Get in Touch</h2>
+<!-- ── PAGE MASTHEAD ──────────────────────────────────────── -->
+<div class="contact-masthead">
+    <div class="contact-masthead-inner reveal">
+        <span class="kicker kicker--light">Engagements &amp; Inquiries</span>
+        <h1>Request an Engagement</h1>
+        <p class="contact-masthead-desc">Mandates are accepted on a selective basis. All inquiries are reviewed personally by the Principal Advisor and responded to within five business days.</p>
+    </div>
+</div>
 
-        <p>
-            For legal advisory, investment risk assessment, institutional collaboration,
-            or academic inquiries, please use the form below.
-        </p>
+<!-- ── MAIN ───────────────────────────────────────────────── -->
+<main>
+    <div class="contact-body">
 
-        <form action="https://formspree.io/f/mkgwalel" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New contact form message from Maddahinasab Legal Advisory">
-            <input type="hidden" name="_next" value="https://maddahinasab.com/contact.html">
+        <!-- LEFT: CONTEXT PANEL -->
+        <aside class="contact-context reveal">
 
-            <div class="honeypot-wrap" aria-hidden="true">
-                <label for="website">Website</label>
-                <input
-                    type="text"
-                    id="website"
-                    name="_gotcha"
-                    tabindex="-1"
-                    autocomplete="off"
-                    spellcheck="false">
+            <h2 class="contact-context-heading">What we engage on</h2>
+            <p class="contact-context-intro">We work with foreign investors, institutional actors, fund managers, and researchers operating in or considering entry to transitional, frontier, and institutionally volatile markets.</p>
+
+            <ul class="contact-inquiry-list" aria-label="Types of inquiry accepted">
+                <li class="contact-inquiry-item">
+                    <span class="contact-inquiry-dot" aria-hidden="true"></span>
+                    <span class="contact-inquiry-text">
+                        Advisory mandates
+                        <span class="contact-inquiry-sub">Transitional risk assessments, market entry structuring, sanctions intelligence, contractual resilience reviews.</span>
+                    </span>
+                </li>
+                <li class="contact-inquiry-item">
+                    <span class="contact-inquiry-dot" aria-hidden="true"></span>
+                    <span class="contact-inquiry-text">
+                        MTRIS™ assessments
+                        <span class="contact-inquiry-sub">Commissioned application of the MTRIS™ framework to a specific market, transaction, or investment scenario.</span>
+                    </span>
+                </li>
+                <li class="contact-inquiry-item">
+                    <span class="contact-inquiry-dot" aria-hidden="true"></span>
+                    <span class="contact-inquiry-text">
+                        Research collaboration
+                        <span class="contact-inquiry-sub">Academic partnerships, joint publications, and institutional research initiatives in investment law and transitional governance.</span>
+                    </span>
+                </li>
+                <li class="contact-inquiry-item">
+                    <span class="contact-inquiry-dot" aria-hidden="true"></span>
+                    <span class="contact-inquiry-text">
+                        Expert network inquiries
+                        <span class="contact-inquiry-sub">Practitioners, academics, and regional specialists interested in joining the advisory network.</span>
+                    </span>
+                </li>
+                <li class="contact-inquiry-item">
+                    <span class="contact-inquiry-dot" aria-hidden="true"></span>
+                    <span class="contact-inquiry-text">
+                        Speaking &amp; conferences
+                        <span class="contact-inquiry-sub">Keynotes, panel contributions, and expert commentary on transitional market law and investment risk.</span>
+                    </span>
+                </li>
+            </ul>
+
+            <div class="contact-note">
+                <p>All engagements are handled with strict confidentiality. We do not share client information or inquiry details with any third party.</p>
             </div>
 
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+            <span class="contact-profiles-label">Profiles &amp; publications</span>
+            <div class="contact-profiles">
+                <a href="https://orcid.org/0000-0002-0598-4980" target="_blank" rel="noopener" class="contact-profile-link">
+                    <i class="fab fa-orcid"></i>
+                    ORCID — Research profile
+                </a>
+                <a href="https://www.researchgate.net/profile/Mostapha-Maddahinasab" target="_blank" rel="noopener" class="contact-profile-link">
+                    <i class="fab fa-researchgate"></i>
+                    ResearchGate — Publications
+                </a>
+                <a href="https://www.linkedin.com/in/mostapha-maddahinasab-28107692/" target="_blank" rel="noopener" class="contact-profile-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn — Professional profile
+                </a>
             </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" placeholder="your@email.com" autocomplete="email" required>
-            </div>
+        </aside>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="7" placeholder="Write your message here..." required></textarea>
-            </div>
+        <!-- RIGHT: FORM PANEL -->
+        <div class="contact-form-panel reveal">
+            <h2 class="contact-form-panel-title">Send a message</h2>
+            <p class="contact-form-panel-sub">Please describe your inquiry as specifically as possible. This helps us assess fit and respond with appropriate detail.</p>
 
-            <button type="submit" class="cta-button primary">Send Message</button>
-        </form>
-    </section>
+            <form
+                id="contact-form"
+                action="https://formspree.io/f/mkgwalel"
+                method="POST"
+                class="contact-form-inner"
+                novalidate>
+
+                <!-- Honeypot -->
+                <div class="honeypot-wrap" aria-hidden="true">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+                </div>
+                <input type="hidden" name="_subject" value="New inquiry — Maddahinasab Legal Advisory">
+                <input type="hidden" name="_next" value="https://maddahinasab.com/contact.html">
+
+                <!-- Name + Organisation -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="organisation">Organisation</label>
+                        <input type="text" id="organisation" name="organisation" placeholder="Company or institution" autocomplete="organization">
+                    </div>
+                </div>
+
+                <!-- Email + Country -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email address <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="_replyto" placeholder="your@email.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country / jurisdiction</label>
+                        <input type="text" id="country" name="country" placeholder="e.g. Germany, UAE" autocomplete="country-name">
+                    </div>
+                </div>
+
+                <!-- Inquiry type -->
+                <div class="form-group">
+                    <label for="inquiry-type">Nature of inquiry <span aria-hidden="true">*</span></label>
+                    <div class="select-wrap">
+                        <select id="inquiry-type" name="inquiry_type" required>
+                            <option value="" disabled selected>Select the closest category</option>
+                            <option value="advisory-mandate">Advisory mandate</option>
+                            <option value="mtris-assessment">MTRIS™ assessment — commissioned</option>
+                            <option value="market-entry">Market entry structuring</option>
+                            <option value="sanctions-compliance">Sanctions &amp; compliance intelligence</option>
+                            <option value="research-collaboration">Research collaboration</option>
+                            <option value="expert-network">Expert network — joining inquiry</option>
+                            <option value="speaking">Speaking &amp; conference invitation</option>
+                            <option value="other">Other — please describe below</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-divider"></div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message <span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" placeholder="Please describe your situation, the market or jurisdiction involved, the nature of your investment or inquiry, and any relevant background. The more specific you are, the more precisely we can respond." required></textarea>
+                </div>
+
+                <button type="submit" class="contact-submit-btn">
+                    Send message
+                </button>
+
+                <!-- Success / error messages (shown via JS) -->
+                <div id="form-success" class="form-message success" role="alert" aria-live="polite">
+                    Your message has been sent. We will review your inquiry and respond within five business days.
+                </div>
+                <div id="form-error" class="form-message error" role="alert" aria-live="polite">
+                    Something went wrong. Please try again, or reach out directly via LinkedIn.
+                </div>
+
+                <p class="form-disclaimer">
+                    All inquiries are handled in strict confidence. We do not share contact information with third parties.
+                </p>
+
+            </form>
+        </div><!-- /form panel -->
+
+    </div><!-- /contact-body -->
 </main>
 
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
-    <p>&copy; 2026 Maddahinasab Legal Advisory</p>
+    <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved.</p>
+        <div class="footer-social">
+            <a href="https://orcid.org/0000-0002-0598-4980" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/mostapha-maddahinasab-28107692/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Mostapha-Maddahinasab" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        </div>
+    </div>
 </footer>
+
+<script>
+    /* Mobile nav */
+    const toggle = document.querySelector('.nav-toggle');
+    const nav    = document.querySelector('.site-nav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }));
+    }
+
+    /* Scroll reveal */
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* Form submission feedback */
+    const form       = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg   = document.getElementById('form-error');
+
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('.contact-submit-btn');
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    successMsg.style.display = 'block';
+                    errorMsg.style.display = 'none';
+                    form.reset();
+                    btn.textContent = 'Sent';
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch {
+                errorMsg.style.display = 'block';
+                successMsg.style.display = 'none';
+                btn.textContent = 'Send message';
+                btn.disabled = false;
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
