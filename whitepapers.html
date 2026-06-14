@@ -96,19 +96,22 @@
     gap: 0;
     border: 1px solid var(--border);
     border-radius: 2px;
-    background: #ffffff;
+    background: rgba(245,240,232,0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     overflow: hidden;
     margin-bottom: 1.5rem;
-    transition: border-color 0.25s, box-shadow 0.25s;
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
 }
 .wp-card:hover {
     border-color: rgba(184,150,74,0.4);
     box-shadow: 0 6px 28px rgba(14,14,12,0.07);
+    background: rgba(245,240,232,0.72);
 }
 
 /* Left meta column */
 .wp-card-meta {
-    background: var(--parchment);
+    background: rgba(230,224,210,0.5);
     border-right: 1px solid var(--border);
     padding: 2.2rem 1.8rem;
     display: flex;
@@ -408,7 +411,7 @@
         <div class="wp-section-label reveal">Published outlooks</div>
 
         <!-- Iran -->
-        <article class="wp-card reveal" aria-label="Iran Transitional Risk Outlook white paper">
+        <article class="wp-card reveal" aria-label="Iran Transitional Legal Risk Framework white paper">
             <div class="wp-card-meta">
                 <span class="wp-market-tag">Iran</span>
                 <div class="wp-status">
@@ -418,19 +421,19 @@
                 <span class="wp-year">2026</span>
             </div>
             <div class="wp-card-body">
-                <h2 class="wp-card-title">Iran Transitional Risk Outlook</h2>
+                <h2 class="wp-card-title">Iran Transitional Legal Risk Framework™</h2>
                 <p class="wp-card-subtitle">Institutional Transitional Risk Assessment for Foreign Investments</p>
                 <p class="wp-card-abstract">A strategic white paper examining institutional volatility, transitional legal risk, regulatory uncertainty, and investment strategy in Iran under scenarios of political change or major policy shifts affecting market accessibility. The framework maps the gap between formal legal rights and institutional reality — identifying where investor exposure is highest across governance shifts, sanctions cycles, and authority fractures.</p>
                 <p class="wp-card-abstract">Designed to help investors identify, classify, and assess legal exposure associated with regulatory transitions, sanctions dynamics, institutional restructuring, and governance volatility. Applies all three MTRIS™ analytical layers sequentially to the Iranian investment environment.</p>
                 <span class="wp-framework-badge"><i class="fas fa-circle"></i> MTRIS™ Applied Framework</span>
                 <div class="wp-card-footer">
-                    <a href="assets/docs/White Paper Iran.pdf"
+                    <a href="assets/docs/iran-transitional-legal-risk-framework.pdf"
                        target="_blank"
                        rel="noopener"
                        class="wp-download-btn">
                         <i class="fas fa-download"></i> Download White Paper
                     </a>
-                    <span class="wp-card-pages">PDF — Full document</span>
+                    <span class="wp-card-pages">PDF — Full framework document</span>
                 </div>
             </div>
         </article>
@@ -452,13 +455,13 @@
                 <p class="wp-card-abstract">Addresses the specific challenge of maintaining legal position in environments where enforcement depends not on formal legal order but on the practical authority of de facto power structures — and how investors can structure against that reality.</p>
                 <span class="wp-framework-badge"><i class="fas fa-circle"></i> MTRIS™ Applied Framework</span>
                 <div class="wp-card-footer">
-                    <a href="assets/docs/White Paper Afghanistan.pdf"
+                    <a href="assets/docs/afghanistan-transitional-risk-outlook.pdf"
                        target="_blank"
                        rel="noopener"
                        class="wp-download-btn">
                         <i class="fas fa-download"></i> Download White Paper
                     </a>
-                    <span class="wp-card-pages">PDF — Full document</span>
+                    <span class="wp-card-pages">PDF — Full framework document</span>
                 </div>
             </div>
         </article>
