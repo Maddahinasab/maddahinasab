@@ -144,15 +144,22 @@
       }
     });
 
-    /* MTRIS™ as a named defined term */
+    /* MTRIS™ — correct DefinedTermSet wrapper to avoid schema validation error */
     inject({
       "@context": "https://schema.org",
-      "@type": "DefinedTerm",
-      "@id": "https://maddahinasab.com/#mtris",
-      "name": "MTRIS™",
-      "alternateName": "Maddahinasab Transitional Risk Intelligence System",
-      "description": "A proprietary three-layer legal-strategic framework created by Mostapha Maddahinasab, Ph.D., designed to evaluate investment resilience in environments where formal law and institutional reality diverge. The three layers are: Institutional (governance legitimacy and regulatory continuity), Transactional (contractual robustness and legal survivability), and Operational (practical feasibility and execution risk).",
-      "inDefinedTermSet": { "@id": "https://maddahinasab.com/#organisation" }
+      "@type": "DefinedTermSet",
+      "@id": "https://maddahinasab.com/#mtris-termset",
+      "name": "MTRIS™ Framework Terminology",
+      "description": "Proprietary analytical framework created by Mostapha Maddahinasab, Ph.D.",
+      "publisher": { "@id": "https://maddahinasab.com/#organisation" },
+      "hasDefinedTerm": {
+        "@type": "DefinedTerm",
+        "@id": "https://maddahinasab.com/#mtris",
+        "name": "MTRIS™",
+        "alternateName": "Maddahinasab Transitional Risk Intelligence System",
+        "description": "A proprietary three-layer legal-strategic framework created by Mostapha Maddahinasab, Ph.D., designed to evaluate investment resilience in environments where formal law and institutional reality diverge. The three layers are: Institutional (governance legitimacy and regulatory continuity), Transactional (contractual robustness and legal survivability), and Operational (practical feasibility and execution risk under fragmented authority).",
+        "inDefinedTermSet": { "@id": "https://maddahinasab.com/#mtris-termset" }
+      }
     });
   }
 
