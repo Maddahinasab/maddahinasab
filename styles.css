@@ -134,7 +134,7 @@ header {
 }
 
 .header-logo-container img {
-    width: 45px;
+    width: 38px;
     height: auto;
     filter: brightness(0) invert(1);
     opacity: 0.92;
@@ -545,6 +545,141 @@ p {
     line-height: 1.65;
     max-width: 100%;
     margin-bottom: 0;
+}
+
+/* ── HOMEPAGE SECTION HEADING LAYOUT (shared two-col pattern) ── */
+/* Used by mtris, research, applications sections on index.html  */
+.mtris-section .section-heading,
+.research-section .section-heading,
+.applications-section .section-heading {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 3.5rem;
+}
+
+.mtris-section-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+}
+
+/* Research section heading and sub on dark background */
+.research-section-heading {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    font-weight: 300;
+    color: var(--parchment);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+}
+.research-section-sub {
+    font-size: 0.88rem;
+    color: rgba(245,240,232,0.42);
+    line-height: 1.78;
+    font-weight: 300;
+    max-width: 100%;
+    margin-bottom: 0;
+    align-self: end;
+}
+
+/* Section sub on light background */
+.section-sub--dark {
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.78;
+    font-weight: 300;
+    max-width: 100%;
+    margin-bottom: 0;
+    align-self: end;
+}
+
+/* Applications section heading on light background */
+.applications-section .section-heading h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+}
+
+/* Service grid on homepage uses .service-grid + .service-item with h4 */
+.service-grid h4 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.35rem;
+}
+.service-desc {
+    font-size: 0.82rem;
+    color: var(--mid);
+    line-height: 1.65;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* About / Founder section on homepage */
+.about-section {
+    background: var(--parchment);
+    padding: clamp(4rem, 9vh, 7rem) 0;
+    border-bottom: 1px solid var(--border);
+}
+.about-section-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 0;
+}
+.about-photo {
+    aspect-ratio: 3/4;
+    background: rgba(14,14,12,0.07);
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.about-text { padding-top: 0.5rem; }
+.about-name {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 300;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+}
+.about-role {
+    font-size: 0.82rem;
+    color: var(--mid);
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+    display: block;
+}
+.about-bio {
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 580px;
+    margin-bottom: 2rem;
 }
 
 /* ── MTRIS SECTION ───────────────────────────────────────── */
@@ -1346,4 +1481,19 @@ footer {
     .cta-group, .hero-cta { flex-direction: column; align-items: stretch; }
     .btn, .cta-button { width: 100%; justify-content: center; }
     .about-photo { max-width: 130px; }
+}
+
+/* ── Homepage section heading grid — tablet collapse ────── */
+@media (max-width: 900px) {
+    .mtris-section .section-heading,
+    .research-section .section-heading,
+    .applications-section .section-heading {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .about-photo { max-width: 160px; }
 }
