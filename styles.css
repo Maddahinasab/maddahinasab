@@ -836,6 +836,119 @@ p {
     letter-spacing: 0.1em;
 }
 
+/* ── MTRIS DOWNLOAD ROW ──────────────────────────────────── */
+.mtris-downloads {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.mtris-dl-link {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1.3rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    flex: 1;
+    min-width: 220px;
+}
+.mtris-dl-link:hover {
+    border-color: rgba(184,150,74,0.45);
+    box-shadow: 0 3px 14px rgba(14,14,12,0.06);
+}
+
+.mtris-dl-icon {
+    font-size: 1.4rem;
+    color: var(--gold-dim);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.mtris-dl-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.mtris-dl-title {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+}
+
+.mtris-dl-desc {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    color: var(--mid);
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* ── SERVICES DOWNLOAD ROW ───────────────────────────────── */
+.services-downloads {
+    max-width: var(--max);
+    margin: 2.5rem auto 0;
+    padding: 0 var(--edge);
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+}
+
+.services-dl-label {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.services-dl-row {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.services-dl-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 0.65rem 1.1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+}
+.services-dl-link i {
+    color: var(--gold-dim);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+.services-dl-link:hover {
+    border-color: rgba(184,150,74,0.45);
+    box-shadow: 0 3px 12px rgba(14,14,12,0.06);
+}
+
+@media (max-width: 600px) {
+    .mtris-downloads { flex-direction: column; }
+    .mtris-dl-link { min-width: unset; }
+    .services-dl-row { flex-direction: column; }
+    .services-dl-link { justify-content: center; }
+}
+
 /* ── RESEARCH SECTION ────────────────────────────────────── */
 .research-section {
     background: var(--navy);
