@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://maddahinasab.com/impressum.html">
+  <title>Impressum / Legal Notice | Maddahinasab Legal Advisory</title>
+  <meta name="description" content="Legal notice (Impressum) for Maddahinasab Legal Advisory, including provider identification and contact information.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="manifest" href="assets/images/site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/js/consent.js" defer></script>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────────── -->
+<header>
+    <div class="header-inner">
+        <div class="header-logo-container">
+            <img src="assets/images/logo2026.svg" alt="Maddahinasab Legal Advisory logo">
+            <div class="header-logo-text">Maddahinasab<br>Legal Advisory</div>
+        </div>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#mtris">MTRIS™</a></li>
+                <li><a href="whitepapers.html">Research</a></li>
+                <li><a href="index.html#services">Advisory</a></li>
+                <li><a href="team.html">Expert Network</a></li>
+                <li><a href="contact.html" class="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ── MASTHEAD ───────────────────────────────────────────── -->
+<div class="legal-masthead">
+    <div class="legal-masthead-inner">
+        <span class="kicker kicker--light">Legal</span>
+        <h1>Impressum / Legal Notice</h1>
+        <p class="legal-masthead-desc">Provider identification in accordance with applicable transparency requirements.</p>
+    </div>
+</div>
+
+<!-- ── MAIN ───────────────────────────────────────────────── -->
+<main>
+<div class="legal-body">
+
+    <h2>Provider</h2>
+    <p>
+        <strong>Mostapha Maddahinasab, Ph.D.</strong><br>
+        Trading as: Maddahinasab Legal Advisory<br>
+        Country: [Insert country of residence/business registration]
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+        Email: <a href="mailto:[insert email address]">[insert email address]</a><br>
+        Website: <a href="https://maddahinasab.com">maddahinasab.com</a>
+    </p>
+
+    <h2>Responsible for content</h2>
+    <p>Mostapha Maddahinasab, Ph.D., is responsible for the content of this website in accordance with applicable law.</p>
+
+    <h2>Professional information</h2>
+    <p>Maddahinasab Legal Advisory is a legal-strategic intelligence and advisory practice. It does not constitute a law firm providing reserved legal services unless explicitly stated for a specific jurisdiction and engagement. Where legal advice requiring formal admission to a bar or equivalent professional body is required, this is provided in coordination with appropriately licensed practitioners within the expert network described on this site.</p>
+
+    <h2>Disclaimer</h2>
+    <p>The content of this website has been prepared with care, but no warranty is given as to its accuracy, completeness, or currency. The information provided does not constitute legal, financial, or investment advice and should not be relied upon as such. Any engagement for advisory services is subject to a separate, formal agreement between the client and Maddahinasab Legal Advisory.</p>
+
+    <h2>External links</h2>
+    <p>This website may contain links to external websites operated by third parties. We have no control over the content of these external sites and accept no liability for their content or privacy practices. We recommend reviewing the privacy policy of any external site you visit.</p>
+
+    <h2>Liability for content</h2>
+    <p>As a service provider, we are responsible for our own content on these pages in accordance with general law. However, we are not obligated to monitor transmitted or stored third-party information, or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under applicable law remain unaffected.</p>
+
+</div>
+</main>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+    <div class="footer-inner">
+        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp; <a href="impressum.html" style="color:inherit;text-decoration:underline;">Impressum</a></p>
+        <div class="footer-social">
+            <a href="https://orcid.org/0000-0002-0598-4980" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+            <a href="https://www.linkedin.com/in/mostapha-maddahinasab-28107692/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Mostapha-Maddahinasab" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav    = document.querySelector('.site-nav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }));
+    }
+</script>
+
+</body>
+</html>
