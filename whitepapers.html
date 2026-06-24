@@ -28,18 +28,20 @@
   <meta name="twitter:image" content="https://maddahinasab.com/assets/images/background.jpg">
 
   <script src="schema.js" defer></script>
+
+  <!-- Consent manager — loads fonts/icons after visitor choice, gates analytics -->
+  <script src="assets/js/consent.js" defer></script>
+
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="manifest" href="assets/images/site.webmanifest">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <style>
 /* ── PAGE-SPECIFIC STYLES (whitepapers.html) ─────────────── */
 
-/* Page hero / masthead */
 .wp-masthead {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     padding: clamp(3.5rem, 8vh, 6rem) 0 clamp(2.5rem, 6vh, 4.5rem);
@@ -70,7 +72,6 @@
     margin-bottom: 0;
 }
 
-/* Section dividers */
 .wp-section {
     max-width: var(--max);
     margin: 0 auto;
@@ -101,7 +102,6 @@
     max-width: 240px;
 }
 
-/* ── PUBLISHED PAPER CARD ─────────────────────────────────── */
 .wp-card {
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -121,7 +121,6 @@
     background: rgba(245,240,232,0.72);
 }
 
-/* Left meta column */
 .wp-card-meta {
     background: rgba(230,224,210,0.5);
     border-right: 1px solid var(--border);
@@ -177,7 +176,6 @@
     margin-top: auto;
 }
 
-/* Right content column */
 .wp-card-body {
     padding: 2.2rem 2.4rem;
     display: flex;
@@ -212,7 +210,6 @@
     margin-bottom: 0;
 }
 
-/* MTRIS badge inside card */
 .wp-framework-badge {
     display: inline-flex;
     align-items: center;
@@ -267,7 +264,6 @@
     letter-spacing: 0.05em;
 }
 
-/* ── FORTHCOMING GRID ─────────────────────────────────────── */
 .wp-forthcoming-intro {
     font-size: 0.9rem;
     color: var(--mid);
@@ -324,7 +320,6 @@
     margin-top: 0.2rem;
 }
 
-/* Inquiry CTA strip */
 .wp-inquiry-strip {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     border-top: 1px solid rgba(245,240,232,0.06);
@@ -355,7 +350,6 @@
     margin-bottom: 0;
 }
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 860px) {
     .wp-card { grid-template-columns: 1fr; }
     .wp-card-meta {
@@ -383,7 +377,6 @@
 
 <body>
 
-<!-- ── HEADER ─────────────────────────────────────────────── -->
 <header>
     <div class="header-inner">
         <div class="header-logo-container">
@@ -406,7 +399,6 @@
     </div>
 </header>
 
-<!-- ── PAGE MASTHEAD ──────────────────────────────────────── -->
 <div class="wp-masthead">
     <div class="wp-masthead-inner reveal">
         <span class="kicker">Strategic Analysis</span>
@@ -415,14 +407,11 @@
     </div>
 </div>
 
-<!-- ── MAIN ───────────────────────────────────────────────── -->
 <main>
 
-    <!-- PUBLISHED SECTION -->
     <div class="wp-section">
         <div class="wp-section-label reveal">Published outlooks</div>
 
-        <!-- Iran -->
         <article class="wp-card reveal" aria-label="Iran Transitional Legal Risk Framework white paper">
             <div class="wp-card-meta">
                 <span class="wp-market-tag">Iran</span>
@@ -450,7 +439,6 @@
             </div>
         </article>
 
-        <!-- Afghanistan -->
         <article class="wp-card reveal" aria-label="Afghanistan Transitional Risk Outlook white paper">
             <div class="wp-card-meta">
                 <span class="wp-market-tag">Afghanistan</span>
@@ -478,9 +466,8 @@
             </div>
         </article>
 
-    </div><!-- /wp-section -->
+    </div>
 
-    <!-- FORTHCOMING SECTION -->
     <div class="wp-section" style="background: var(--parchment);">
         <div class="wp-section-label reveal">Forthcoming outlooks</div>
 
@@ -543,17 +530,15 @@
             </div>
 
         </div>
-        <!-- end forthcoming grid -->
 
         <p class="reveal" style="margin-top: 1.5rem; font-size: 0.78rem; color: rgba(107,104,96,0.55); font-style: italic;">
             This catalogue reflects markets currently under assessment. It does not represent a complete scope of MTRIS™ coverage. Commissioned analysis of unlisted markets is available on request.
         </p>
 
-    </div><!-- /wp-section -->
+    </div>
 
 </main>
 
-<!-- ── INQUIRY CTA STRIP ───────────────────────────────────── -->
 <div class="wp-inquiry-strip">
     <div class="wp-inquiry-inner reveal">
         <div class="wp-inquiry-text">
@@ -566,10 +551,9 @@
     </div>
 </div>
 
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
     <div class="footer-inner">
-        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp; <a href="impressum.html" style="color:inherit;text-decoration:underline;">Impressum</a></p>
         <div class="footer-social">
             <a href="https://orcid.org/0000-0002-0598-4980" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
             <a href="https://www.linkedin.com/in/mostapha-maddahinasab-28107692/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -579,7 +563,6 @@
 </footer>
 
 <script>
-    /* Mobile nav */
     const toggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.site-nav');
     if (toggle && nav) {
@@ -593,7 +576,6 @@
         }));
     }
 
-    /* Scroll reveal */
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) {
