@@ -27,17 +27,17 @@
   <meta name="twitter:image" content="https://maddahinasab.com/assets/images/background.jpg">
 
   <script src="schema.js" defer></script>
+
+  <!-- Consent manager — loads fonts/icons after visitor choice, gates analytics -->
+  <script src="assets/js/consent.js" defer></script>
+
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="manifest" href="assets/images/site.webmanifest">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <style>
-/* ── PAGE-SPECIFIC STYLES (contact.html) ─────────────────── */
-
-/* Masthead */
 .contact-masthead {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     padding: clamp(3.5rem, 8vh, 6rem) 0 clamp(2.5rem, 6vh, 4.5rem);
@@ -66,8 +66,6 @@
     max-width: 520px;
     margin: 0;
 }
-
-/* ── TWO-COLUMN BODY ──────────────────────────────────────── */
 .contact-body {
     max-width: var(--max);
     margin: 0 auto;
@@ -77,10 +75,7 @@
     gap: 5rem;
     align-items: start;
 }
-
-/* ── LEFT: CONTEXT PANEL ──────────────────────────────────── */
 .contact-context { position: sticky; top: 88px; }
-
 .contact-context-heading {
     font-family: var(--serif);
     font-size: clamp(1.4rem, 2.5vw, 1.9rem);
@@ -90,7 +85,6 @@
     letter-spacing: -0.01em;
     margin-bottom: 1.1rem;
 }
-
 .contact-context-intro {
     font-size: 0.88rem;
     color: var(--mid);
@@ -99,14 +93,11 @@
     max-width: 100%;
     margin-bottom: 2.2rem;
 }
-
-/* Inquiry type list */
 .contact-inquiry-list {
     list-style: none;
     border-top: 1px solid var(--border);
     margin-bottom: 2.5rem;
 }
-
 .contact-inquiry-item {
     display: flex;
     align-items: flex-start;
@@ -114,7 +105,6 @@
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
 }
-
 .contact-inquiry-dot {
     width: 5px;
     height: 5px;
@@ -124,7 +114,6 @@
     margin-top: 0.55rem;
     opacity: 0.8;
 }
-
 .contact-inquiry-text {
     font-family: var(--sans);
     font-size: 0.85rem;
@@ -132,7 +121,6 @@
     line-height: 1.5;
     font-weight: 400;
 }
-
 .contact-inquiry-sub {
     display: block;
     font-size: 0.76rem;
@@ -141,8 +129,6 @@
     margin-top: 0.2rem;
     line-height: 1.5;
 }
-
-/* Selectivity note */
 .contact-note {
     background: var(--parchment);
     border: 1px solid var(--border);
@@ -161,8 +147,6 @@
     margin: 0;
     max-width: 100%;
 }
-
-/* Social / profile links */
 .contact-profiles-label {
     font-family: var(--sans);
     font-size: 0.65rem;
@@ -173,13 +157,11 @@
     display: block;
     margin-bottom: 0.9rem;
 }
-
 .contact-profiles {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
 }
-
 .contact-profile-link {
     display: flex;
     align-items: center;
@@ -192,7 +174,6 @@
     text-decoration: none;
 }
 .contact-profile-link:hover { color: var(--ink); }
-
 .contact-profile-link i {
     width: 18px;
     text-align: center;
@@ -200,15 +181,12 @@
     color: var(--gold-dim);
     flex-shrink: 0;
 }
-
-/* ── RIGHT: FORM PANEL ────────────────────────────────────── */
 .contact-form-panel {
-    background: Transparent;
+    background: transparent;
     border: 1px solid var(--border);
     border-radius: 2px;
     padding: clamp(2rem, 4vw, 3rem) clamp(1.8rem, 4vw, 2.8rem);
 }
-
 .contact-form-panel-title {
     font-family: var(--serif);
     font-size: 1.25rem;
@@ -216,7 +194,6 @@
     color: var(--ink);
     margin-bottom: 0.35rem;
 }
-
 .contact-form-panel-sub {
     font-size: 0.82rem;
     color: var(--mid);
@@ -225,12 +202,7 @@
     line-height: 1.6;
     max-width: 100%;
 }
-
-/* Form fields */
-.contact-form-inner .form-group {
-    margin-bottom: 1.1rem;
-}
-
+.contact-form-inner .form-group { margin-bottom: 1.1rem; }
 .contact-form-inner label {
     display: block;
     font-family: var(--sans);
@@ -241,7 +213,6 @@
     color: var(--mid);
     margin-bottom: 0.45rem;
 }
-
 .contact-form-inner input,
 .contact-form-inner textarea,
 .contact-form-inner select {
@@ -258,13 +229,11 @@
     appearance: none;
     -webkit-appearance: none;
 }
-
 .contact-form-inner input::placeholder,
 .contact-form-inner textarea::placeholder {
     color: rgba(107,104,96,0.45);
     font-weight: 300;
 }
-
 .contact-form-inner input:focus,
 .contact-form-inner textarea:focus,
 .contact-form-inner select:focus {
@@ -273,46 +242,23 @@
     box-shadow: 0 0 0 3px rgba(184,150,74,0.1);
     background: #ffffff;
 }
-
-.contact-form-inner textarea {
-    min-height: 160px;
-    resize: vertical;
-}
-
-/* Select arrow */
-.select-wrap {
-    position: relative;
-}
+.contact-form-inner textarea { min-height: 160px; resize: vertical; }
+.select-wrap { position: relative; }
 .select-wrap::after {
     content: '';
     position: absolute;
     right: 0.95rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 0;
-    height: 0;
+    width: 0; height: 0;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 5px solid var(--mid);
     pointer-events: none;
 }
 .select-wrap select { padding-right: 2.2rem; cursor: pointer; }
-
-/* Form row (two columns) */
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-}
-
-/* Divider */
-.form-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 1.4rem 0;
-}
-
-/* Submit button */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+.form-divider { height: 1px; background: var(--border); margin: 1.4rem 0; }
 .contact-submit-btn {
     width: 100%;
     padding: 0.95rem 1.5rem;
@@ -331,8 +277,6 @@
 }
 .contact-submit-btn:hover { background: #c8a45a; border-color: #c8a45a; }
 .contact-submit-btn:active { transform: scale(0.99); }
-
-/* Disclaimer below form */
 .form-disclaimer {
     font-size: 0.72rem;
     color: rgba(107,104,96,0.5);
@@ -343,8 +287,6 @@
     max-width: 100%;
     margin-bottom: 0;
 }
-
-/* Success / error state */
 .form-message {
     display: none;
     padding: 1rem 1.2rem;
@@ -366,29 +308,19 @@
     border: 1px solid rgba(239,68,68,0.25);
     color: #991b1b;
 }
-
-/* Honeypot */
 .honeypot-wrap {
     position: absolute;
     left: -9999px;
-    width: 1px;
-    height: 1px;
+    width: 1px; height: 1px;
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
-    tabindex: -1;
 }
-
-/* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 860px) {
-    .contact-body {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
+    .contact-body { grid-template-columns: 1fr; gap: 3rem; }
     .contact-context { position: static; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
 }
-
 @media (max-width: 480px) {
     .contact-form-panel { padding: 1.6rem 1.3rem; }
 }
@@ -397,7 +329,6 @@
 
 <body>
 
-<!-- ── HEADER ─────────────────────────────────────────────── -->
 <header>
     <div class="header-inner">
         <div class="header-logo-container">
@@ -420,7 +351,6 @@
     </div>
 </header>
 
-<!-- ── PAGE MASTHEAD ──────────────────────────────────────── -->
 <div class="contact-masthead">
     <div class="contact-masthead-inner reveal">
         <span class="kicker kicker--light">Engagements &amp; Inquiries</span>
@@ -429,11 +359,9 @@
     </div>
 </div>
 
-<!-- ── MAIN ───────────────────────────────────────────────── -->
 <main>
     <div class="contact-body">
 
-        <!-- LEFT: CONTEXT PANEL -->
         <aside class="contact-context reveal">
 
             <h2 class="contact-context-heading">What we engage on</h2>
@@ -499,7 +427,6 @@
 
         </aside>
 
-        <!-- RIGHT: FORM PANEL -->
         <div class="contact-form-panel reveal">
             <h2 class="contact-form-panel-title">Send a message</h2>
             <p class="contact-form-panel-sub">Please describe your inquiry as specifically as possible. This helps us assess fit and respond with appropriate detail.</p>
@@ -511,7 +438,6 @@
                 class="contact-form-inner"
                 novalidate>
 
-                <!-- Honeypot -->
                 <div class="honeypot-wrap" aria-hidden="true">
                     <label for="website">Website</label>
                     <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
@@ -519,7 +445,6 @@
                 <input type="hidden" name="_subject" value="New inquiry — Maddahinasab Legal Advisory">
                 <input type="hidden" name="_next" value="https://maddahinasab.com/contact.html">
 
-                <!-- Name + Organisation -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full name <span aria-hidden="true">*</span></label>
@@ -531,7 +456,6 @@
                     </div>
                 </div>
 
-                <!-- Email + Country -->
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email address <span aria-hidden="true">*</span></label>
@@ -543,7 +467,6 @@
                     </div>
                 </div>
 
-                <!-- Inquiry type -->
                 <div class="form-group">
                     <label for="inquiry-type">Nature of inquiry <span aria-hidden="true">*</span></label>
                     <div class="select-wrap">
@@ -563,7 +486,6 @@
 
                 <div class="form-divider"></div>
 
-                <!-- Message -->
                 <div class="form-group">
                     <label for="message">Message <span aria-hidden="true">*</span></label>
                     <textarea id="message" name="message" placeholder="Please describe your situation, the market or jurisdiction involved, the nature of your investment or inquiry, and any relevant background. The more specific you are, the more precisely we can respond." required></textarea>
@@ -573,7 +495,6 @@
                     Send message
                 </button>
 
-                <!-- Success / error messages (shown via JS) -->
                 <div id="form-success" class="form-message success" role="alert" aria-live="polite">
                     Your message has been sent. We will review your inquiry and respond within five business days.
                 </div>
@@ -586,15 +507,14 @@
                 </p>
 
             </form>
-        </div><!-- /form panel -->
+        </div>
 
-    </div><!-- /contact-body -->
+    </div>
 </main>
 
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
     <div class="footer-inner">
-        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp; <a href="impressum.html" style="color:inherit;text-decoration:underline;">Impressum</a></p>
         <div class="footer-social">
             <a href="https://orcid.org/0000-0002-0598-4980" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
             <a href="https://www.linkedin.com/in/mostapha-maddahinasab-28107692/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -604,7 +524,6 @@
 </footer>
 
 <script>
-    /* Mobile nav */
     const toggle = document.querySelector('.nav-toggle');
     const nav    = document.querySelector('.site-nav');
     if (toggle && nav) {
@@ -618,7 +537,6 @@
         }));
     }
 
-    /* Scroll reveal */
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) {
@@ -629,7 +547,6 @@
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    /* Form submission feedback */
     const form       = document.getElementById('contact-form');
     const successMsg = document.getElementById('form-success');
     const errorMsg   = document.getElementById('form-error');
