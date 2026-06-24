@@ -27,18 +27,20 @@
   <meta name="twitter:image" content="https://maddahinasab.com/assets/images/background.jpg">
 
   <script src="schema.js" defer></script>
+
+  <!-- Consent manager — loads fonts/icons after visitor choice, gates analytics -->
+  <script src="assets/js/consent.js" defer></script>
+
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="manifest" href="assets/images/site.webmanifest">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 <style>
 /* ── PAGE-SPECIFIC STYLES (team.html) ────────────────────── */
 
-/* Masthead */
 .team-masthead {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     padding: clamp(3.5rem, 8vh, 6rem) 0 clamp(2.5rem, 6vh, 4.5rem);
@@ -68,14 +70,12 @@
     margin: 0;
 }
 
-/* Page body wrapper */
 .team-page-body {
     max-width: var(--max);
     margin: 0 auto;
     padding: 0 var(--edge);
 }
 
-/* Section label (horizontal rule style) */
 .team-section-label {
     font-family: var(--sans);
     font-size: 0.66rem;
@@ -96,7 +96,6 @@
     background: var(--border);
 }
 
-/* ── FOUNDER PANEL ────────────────────────────────────────── */
 .founder-panel {
     padding: clamp(3.5rem, 8vh, 5.5rem) 0;
     border-bottom: 1px solid var(--border);
@@ -133,7 +132,6 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
-/* Gold accent bar beside photo */
 .founder-panel-photo::before {
     content: '';
     position: absolute;
@@ -178,7 +176,6 @@
 }
 .founder-panel-bio + .founder-panel-bio { margin-top: -0.5rem; }
 
-/* Credential tags */
 .founder-tags {
     display: flex;
     flex-wrap: wrap;
@@ -197,7 +194,6 @@
     border-radius: 2px;
 }
 
-/* Links row */
 .founder-panel-links {
     display: flex;
     align-items: center;
@@ -229,7 +225,6 @@
 }
 .founder-social a:hover { color: var(--ink); }
 
-/* ── EXPERTISE TAGS SECTION ──────────────────────────────── */
 .expertise-section {
     padding: clamp(3rem, 6vh, 4.5rem) 0;
     border-bottom: 1px solid var(--border);
@@ -255,11 +250,8 @@
     transition: background 0.18s;
 }
 .expertise-tag-item:hover { background: var(--parchment); }
-/* Remove right border from right-column items */
 .expertise-tag-item:nth-child(even) { border-right: none; }
-/* Remove bottom border from last two */
 .expertise-tag-item:nth-last-child(-n+2) { border-bottom: none; }
-/* If odd number, last item spans */
 .expertise-tag-item:last-child:nth-child(odd) {
     grid-column: span 2;
     border-right: none;
@@ -281,7 +273,6 @@
     line-height: 1.4;
 }
 
-/* ── EXPERT NETWORK GRID ─────────────────────────────────── */
 .network-section {
     padding: clamp(3rem, 7vh, 5rem) 0;
     border-bottom: 1px solid var(--border);
@@ -293,7 +284,6 @@
     gap: 1.25rem;
 }
 
-/* Expert card */
 .expert-card {
     background: #ffffff;
     border: 1px solid var(--border);
@@ -309,7 +299,6 @@
     transform: translateY(-3px);
 }
 
-/* Photo */
 .expert-card-photo {
     width: 100%;
     aspect-ratio: 3/4;
@@ -333,13 +322,11 @@
     text-transform: uppercase;
 }
 
-/* Domain accent bar — top edge colour per type */
 .expert-card[data-domain="law"]       { border-top: 3px solid #B8964A; }
 .expert-card[data-domain="technical"] { border-top: 3px solid #7B9E7B; }
 .expert-card[data-domain="academic"]  { border-top: 3px solid #7B8FA8; }
 .expert-card[data-domain="reserved"]  { border-top: 3px solid rgba(14,14,12,0.1); }
 
-/* Card body */
 .expert-card-body {
     padding: 1.3rem 1.4rem 1.5rem;
     display: flex;
@@ -392,7 +379,6 @@
     color: var(--ink);
 }
 
-/* Domain legend */
 .domain-legend {
     display: flex;
     gap: 1.5rem;
@@ -421,12 +407,10 @@
 .domain-legend-bar.technical { background: #7B9E7B; }
 .domain-legend-bar.academic  { background: #7B8FA8; }
 
-/* Placeholder card */
 .expert-card-reserved .expert-card-name { color: var(--mid); font-style: italic; }
 .expert-card-reserved .expert-card-role { color: rgba(107,104,96,0.45); }
 .expert-card-reserved .expert-card-bio  { color: rgba(107,104,96,0.35); font-style: italic; }
 
-/* ── COLLABORATION MODEL ──────────────────────────────────── */
 .collab-section {
     padding: clamp(3rem, 6vh, 4.5rem) 0;
     border-bottom: 1px solid var(--border);
@@ -454,7 +438,6 @@
     margin-bottom: 0;
 }
 
-/* ── JOIN CTA STRIP ──────────────────────────────────────── */
 .join-strip {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     border-top: 1px solid rgba(245,240,232,0.06);
@@ -485,7 +468,6 @@
     margin-bottom: 0;
 }
 
-/* ── RESPONSIVE ───────────────────────────────────────────── */
 @media (max-width: 960px) {
     .expert-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -512,7 +494,6 @@
 
 <body>
 
-<!-- ── HEADER ─────────────────────────────────────────────── -->
 <header>
     <div class="header-inner">
         <div class="header-logo-container">
@@ -535,7 +516,6 @@
     </div>
 </header>
 
-<!-- ── PAGE MASTHEAD ──────────────────────────────────────── -->
 <div class="team-masthead">
     <div class="team-masthead-inner reveal">
         <span class="kicker kicker--light">Leadership &amp; Collaboration</span>
@@ -544,11 +524,9 @@
     </div>
 </div>
 
-<!-- ── MAIN ───────────────────────────────────────────────── -->
 <main>
 <div class="team-page-body">
 
-    <!-- ── FOUNDER PANEL ──────────────────────────────────── -->
     <section class="founder-panel">
         <div class="team-section-label reveal">Principal advisor</div>
         <div class="founder-panel-inner reveal">
@@ -584,7 +562,6 @@
         </div>
     </section>
 
-    <!-- ── AREAS OF EXPERTISE ─────────────────────────────── -->
     <section class="expertise-section">
         <div class="team-section-label reveal">Network expertise</div>
         <div class="expertise-tag-grid reveal">
@@ -623,11 +600,9 @@
         </div>
     </section>
 
-    <!-- ── EXPERT PROFILES ────────────────────────────────── -->
     <section class="network-section">
         <div class="team-section-label reveal">Expert profiles</div>
 
-        <!-- Domain colour legend -->
         <div class="domain-legend reveal">
             <div class="domain-legend-item">
                 <span class="domain-legend-bar law"></span>
@@ -645,7 +620,6 @@
 
         <div class="expert-grid">
 
-            <!-- Mojtaba Ahmadi -->
             <article class="expert-card reveal" data-domain="technical">
                 <img class="expert-card-photo"
                      src="assets/images/team/ahmadi.jpg"
@@ -660,7 +634,6 @@
                 </div>
             </article>
 
-            <!-- Nasrin Ahmadi -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/nahmadi.jpg"
@@ -675,7 +648,6 @@
                 </div>
             </article>
 
-            <!-- Abdollah Taqaddusi -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/taqaddusi.jpg"
@@ -690,7 +662,6 @@
                 </div>
             </article>
 
-            <!-- Omid Jamshidi -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/jamshidi.jpg"
@@ -705,7 +676,6 @@
                 </div>
             </article>
 
-            <!-- Hossein Hajiani -->
             <article class="expert-card reveal" data-domain="academic">
                 <img class="expert-card-photo"
                      src="assets/images/team/hajiani.jpg"
@@ -720,7 +690,6 @@
                 </div>
             </article>
 
-          <!-- Niloofar Heydari -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/nheydari.jpg"
@@ -729,13 +698,12 @@
                 <div class="expert-card-photo-placeholder" style="display:none"></div>
                 <div class="expert-card-body">
                     <h3 class="expert-card-name">Niloofar Heydari</h3>
-                    <p class="expert-card-role">Petroleum Law . Tendering & Bidding Processes &amp; Sanctions Expert</p>
+                    <p class="expert-card-role">Petroleum Law · Tendering &amp; Bidding Processes &amp; Sanctions Expert</p>
                     <div class="expert-card-divider"></div>
-                    <p class="expert-card-bio">Ph.D. in Oil and Gas Law, University of Tehran. Manager of the legal and contractual department at <strong>Mapna Oil and Gas, E&P Company</strong>, one of Iran’s leading oil and gas upstream companies.Specialist in <strong>Upstream Petroleum Contracts, Tendering and Bidding Processes, and Regulatory Compliance in the Oil and Gas Sector</strong>. Contributes extensive practical and strategic expertise concerning <strong>Energy Investment</strong> mandates in  <strong>transitional and sanctions-sensitive environments</strong>.</p>
+                    <p class="expert-card-bio">Ph.D. in Oil and Gas Law, University of Tehran. Manager of the legal and contractual department at <strong>Mapna Oil and Gas, E&amp;P Company</strong>, one of Iran's leading oil and gas upstream companies. Specialist in <strong>upstream petroleum contracts, tendering and bidding processes, and regulatory compliance</strong> in the oil and gas sector. Contributes extensive practical and strategic expertise concerning <strong>energy investment</strong> mandates in transitional and sanctions-sensitive environments.</p>
                 </div>
             </article>
 
-            <!-- Behnoush Dalfardi -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/Dalfardi.jpg"
@@ -750,7 +718,6 @@
                 </div>
             </article>
 
-            <!-- Meysam Saidi Nezhad -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/saeidi.jpg"
@@ -765,7 +732,6 @@
                 </div>
             </article>
 
-            <!-- Sara Famoori -->
             <article class="expert-card reveal" data-domain="academic">
                 <img class="expert-card-photo"
                      src="assets/images/team/famoori.jpg"
@@ -780,7 +746,6 @@
                 </div>
             </article>
 
-            <!-- Behnam Karami Nezhad -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/karami.jpg"
@@ -795,7 +760,6 @@
                 </div>
             </article>
 
-            <!-- Ahmadreza Mashayekhi -->
             <article class="expert-card reveal" data-domain="technical">
                 <img class="expert-card-photo"
                      src="assets/images/team/mashayekhi.png"
@@ -810,7 +774,6 @@
                 </div>
             </article>
 
-          <!-- Yousef Moslemi Mehni-->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/moslemi.jpg"
@@ -818,14 +781,13 @@
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                 <div class="expert-card-photo-placeholder" style="display:none"></div>
                 <div class="expert-card-body">
-                    <h3 class="expert-card-name">Yousef Moslemi Mehni Ph.D.</h3>
+                    <h3 class="expert-card-name">Yousef Moslemi Mehni, Ph.D.</h3>
                     <p class="expert-card-role">Public Policy &amp; Geopolitics &amp; SMEs Advisor</p>
                     <div class="expert-card-divider"></div>
-                    <p class="expert-card-bio">Highly exprienced investment advisor, Associate Professor of Public Policy at Shahid Bahonar University of Kerman, Doctorate in Public Policy from the University of Tehran. Entrepreneurship lecturer and advisor to the <strong>Small & Medium Industries</strong>. Contributes strategic expertise in our <strong>Geopolitical and Public Policies</strong> Analysis.</p>
+                    <p class="expert-card-bio">Highly experienced investment advisor, Associate Professor of Public Policy at Shahid Bahonar University of Kerman, Doctorate in Public Policy from the University of Tehran. Entrepreneurship lecturer and advisor to <strong>Small &amp; Medium Industries</strong>. Contributes strategic expertise in our <strong>geopolitical and public policy analysis</strong>.</p>
                 </div>
             </article>
 
-            <!-- Delnia Najafian -->
             <article class="expert-card reveal" data-domain="academic">
                 <img class="expert-card-photo"
                      src="assets/images/team/najafian.jpg"
@@ -840,7 +802,6 @@
                 </div>
             </article>
 
-            <!-- Mozhde Yousefian -->
             <article class="expert-card reveal" data-domain="law">
                 <img class="expert-card-photo"
                      src="assets/images/team/Yousefian.jpg"
@@ -855,10 +816,9 @@
                 </div>
             </article>
 
-        </div><!-- /expert-grid -->
+        </div>
     </section>
 
-    <!-- ── COLLABORATION MODEL ─────────────────────────────── -->
     <section class="collab-section">
         <div class="team-section-label reveal">How the network operates</div>
         <div class="collab-grid reveal">
@@ -873,10 +833,9 @@
         </div>
     </section>
 
-</div><!-- /team-page-body -->
+</div>
 </main>
 
-<!-- ── JOIN / COLLABORATION CTA STRIP ─────────────────────── -->
 <div class="join-strip">
     <div class="join-strip-inner reveal">
         <div>
@@ -889,10 +848,9 @@
     </div>
 </div>
 
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
     <div class="footer-inner">
-        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Maddahinasab Legal Advisory. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp; <a href="impressum.html" style="color:inherit;text-decoration:underline;">Impressum</a></p>
         <div class="footer-social">
             <a href="https://orcid.org/0000-0002-0598-4980" target="_blank" rel="noopener" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
             <a href="https://www.linkedin.com/in/mostapha-maddahinasab-28107692/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -902,7 +860,6 @@
 </footer>
 
 <script>
-    /* Mobile nav */
     const toggle = document.querySelector('.nav-toggle');
     const nav    = document.querySelector('.site-nav');
     if (toggle && nav) {
@@ -916,7 +873,6 @@
         }));
     }
 
-    /* Scroll reveal */
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(e => {
             if (e.isIntersecting) {
