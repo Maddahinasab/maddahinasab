@@ -69,7 +69,6 @@ a {
 }
 
 /* ── WATERMARK ───────────────────────────────────────────── */
-/* Preserved exactly — sits behind all content via z-index: -1 */
 body::before {
     content: "";
     position: fixed;
@@ -125,7 +124,6 @@ header {
     min-height: 48px;
 }
 
-/* Logo + wordmark */
 .header-logo-container {
     display: flex;
     align-items: center;
@@ -151,7 +149,6 @@ header {
     line-height: 1.3;
 }
 
-/* Navigation */
 .site-nav ul {
     list-style: none;
     display: flex;
@@ -187,7 +184,6 @@ header {
     color: var(--gold);
 }
 
-/* Mobile hamburger */
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -263,7 +259,6 @@ p {
     max-width: 820px;
 }
 
-/* Kicker / eyebrow label */
 .section-kicker,
 .kicker {
     font-family: var(--sans);
@@ -312,7 +307,6 @@ p {
     text-decoration: none;
 }
 
-/* Primary / gold fill */
 .btn-gold,
 .cta-button.primary {
     background: var(--gold);
@@ -326,7 +320,6 @@ p {
     color: var(--ink);
 }
 
-/* Ghost / outline */
 .btn-outline,
 .cta-button.outline {
     background: transparent;
@@ -339,7 +332,6 @@ p {
     color: #ffffff;
 }
 
-/* Secondary (light bg pages) */
 .cta-button.secondary {
     background: var(--parchment);
     color: var(--ink);
@@ -348,6 +340,17 @@ p {
 .cta-button.secondary:hover {
     background: #ede8e0;
     border-color: rgba(14,14,12,0.22);
+}
+
+/* Outline button variant for light backgrounds (used by newsletter section) */
+.btn-outline-dark {
+    background: transparent;
+    color: var(--ink);
+    border-color: rgba(14,14,12,0.25);
+}
+.btn-outline-dark:hover {
+    border-color: var(--ink);
+    background: rgba(14,14,12,0.04);
 }
 
 /* ============================================================
@@ -397,7 +400,6 @@ p {
     padding-top: 0;
 }
 
-/* Eyebrow */
 .hero-eyebrow,
 .hero-section .section-kicker {
     font-family: var(--sans);
@@ -410,7 +412,6 @@ p {
     margin-bottom: 2rem;
 }
 
-/* H1 */
 .hero-title {
     font-family: var(--serif);
     font-size: clamp(2.2rem, 5.5vw, 4.6rem);
@@ -426,7 +427,6 @@ p {
     color: rgba(245,240,232,0.55);
 }
 
-/* Subtitle / body */
 .hero-subtitle {
     font-family: var(--sans);
     font-size: clamp(0.88rem, 1.4vw, 1rem);
@@ -437,7 +437,6 @@ p {
     margin-bottom: 2.75rem;
 }
 
-/* CTA row */
 .cta-group,
 .hero-cta {
     display: flex;
@@ -447,7 +446,6 @@ p {
     justify-content: flex-start;
 }
 
-/* Scroll indicator */
 .hero-scroll {
     position: absolute;
     right: var(--edge);
@@ -548,7 +546,6 @@ p {
 }
 
 /* ── HOMEPAGE SECTION HEADING LAYOUT (shared two-col pattern) ── */
-/* Used by mtris, research, applications sections on index.html  */
 .mtris-section .section-heading,
 .research-section .section-heading,
 .applications-section .section-heading {
@@ -568,7 +565,6 @@ p {
     padding: 0 var(--edge);
 }
 
-/* Research section heading and sub on dark background */
 .research-section-heading {
     font-family: var(--serif);
     font-size: clamp(1.8rem, 3.2vw, 2.7rem);
@@ -588,7 +584,6 @@ p {
     align-self: end;
 }
 
-/* Section sub on light background */
 .section-sub--dark {
     font-size: 0.88rem;
     color: var(--mid);
@@ -599,7 +594,6 @@ p {
     align-self: end;
 }
 
-/* Applications section heading on light background */
 .applications-section .section-heading h2 {
     font-family: var(--serif);
     font-size: clamp(1.8rem, 3.2vw, 2.7rem);
@@ -610,7 +604,6 @@ p {
     margin-bottom: 0;
 }
 
-/* Service grid on homepage uses .service-grid + .service-item with h4 */
 .service-grid h4 {
     font-family: var(--serif);
     font-size: 1rem;
@@ -721,14 +714,12 @@ p {
 }
 .mtris-intro strong { font-weight: 500; color: var(--ink); }
 
-/* MTRIS grid — signature three-layer treatment */
 .mtris-grid {
     max-width: var(--max);
     margin: 0 auto;
     padding: 0 var(--edge);
 }
 
-/* Each card becomes a horizontal layer row */
 .mtris-card {
     display: grid;
     grid-template-columns: 80px 1fr;
@@ -743,7 +734,6 @@ p {
 }
 .mtris-card:last-child { border-bottom: 1px solid var(--border); }
 
-/* Ghost layer numeral — the signature design element */
 .mtris-card::before {
     font-family: var(--serif);
     font-size: 5rem;
@@ -759,7 +749,6 @@ p {
 .mtris-card:nth-child(2)::before { content: 'II'; }
 .mtris-card:nth-child(3)::before { content: 'III'; }
 
-/* Card content area */
 .mtris-card-body {
     padding-left: 2rem;
 }
@@ -776,7 +765,6 @@ p {
     flex-wrap: wrap;
 }
 
-/* Layer category badge */
 .mtris-card h4::after {
     font-family: var(--sans);
     font-size: 0.6rem;
@@ -801,7 +789,6 @@ p {
     margin-bottom: 0.9rem;
 }
 
-/* Pointed question in gold rule callout */
 .mtris-card-question {
     font-family: var(--serif);
     font-size: 0.92rem;
@@ -814,7 +801,6 @@ p {
     margin-top: 0.9rem;
 }
 
-/* MTRIS resource / download area */
 .mtris-resource-grid {
     max-width: var(--max);
     margin: 3rem auto 0;
@@ -949,6 +935,230 @@ p {
     .services-dl-link { justify-content: center; }
 }
 
+/* ============================================================
+   NEWSLETTER SECTION (Interregnum Counsel) — homepage
+   ============================================================ */
+.newsletter-section {
+    background: var(--parchment);
+    padding: clamp(4rem, 9vh, 6.5rem) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.newsletter-card {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.newsletter-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.newsletter-logo img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+}
+
+.newsletter-content { max-width: 640px; }
+
+.newsletter-kicker {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 0.9rem;
+}
+
+.newsletter-title {
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.6rem;
+}
+
+.newsletter-tagline {
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--mid);
+    margin-bottom: 1.2rem;
+}
+
+.newsletter-desc {
+    font-size: 0.92rem;
+    color: var(--mid);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.newsletter-issue-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    border: 1px solid rgba(184,150,74,0.35);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+    margin-bottom: 1.4rem;
+}
+.newsletter-issue-tag i { font-size: 0.62rem; color: var(--gold); }
+
+.newsletter-cta-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 780px) {
+    .newsletter-card {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        text-align: center;
+    }
+    .newsletter-logo img { max-width: 140px; }
+    .newsletter-cta-row { justify-content: center; }
+}
+
+/* ============================================================
+   NEWSLETTER SECTION — whitepapers.html
+   ============================================================ */
+.newsletter-wp-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: rgba(245,240,232,0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+.newsletter-wp-card:hover {
+    border-color: rgba(184,150,74,0.4);
+    box-shadow: 0 6px 28px rgba(14,14,12,0.07);
+    background: rgba(245,240,232,0.72);
+}
+
+.newsletter-wp-meta {
+    background: rgba(230,224,210,0.5);
+    border-right: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+.newsletter-wp-meta img {
+    width: 100%;
+    max-width: 110px;
+    height: auto;
+}
+.newsletter-wp-issue {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+}
+
+.newsletter-wp-body {
+    padding: 2rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+.newsletter-wp-title {
+    font-family: var(--serif);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.32;
+    margin-bottom: 0;
+}
+.newsletter-wp-subtitle {
+    font-family: var(--sans);
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: var(--gold-dim);
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+}
+.newsletter-wp-abstract {
+    font-size: 0.86rem;
+    color: var(--mid);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 640px;
+    margin-bottom: 0;
+}
+.newsletter-wp-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.newsletter-subscribe-strip {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-radius: 2px;
+    padding: 1.6rem 2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.newsletter-subscribe-text {
+    font-family: var(--serif);
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: var(--parchment);
+    font-style: italic;
+    max-width: 480px;
+}
+
+@media (max-width: 780px) {
+    .newsletter-wp-card { grid-template-columns: 1fr; }
+    .newsletter-wp-meta {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        flex-direction: row;
+        justify-content: center;
+    }
+    .newsletter-wp-meta img { max-width: 70px; }
+    .newsletter-subscribe-strip { flex-direction: column; text-align: center; }
+}
+
 /* ── RESEARCH SECTION ────────────────────────────────────── */
 .research-section {
     background: var(--navy);
@@ -986,7 +1196,6 @@ p {
     align-self: end;
 }
 
-/* Expertise / research card grid */
 .expertise-grid {
     max-width: var(--max);
     margin: 0 auto;
@@ -1013,7 +1222,6 @@ p {
 .expertise-card::before { display: none; }
 .expertise-card:hover { background: #16160e; }
 
-/* Market / region tag */
 .expertise-card-market {
     font-family: var(--sans);
     font-size: 0.62rem;
@@ -1093,7 +1301,6 @@ p {
     align-self: end;
 }
 
-/* Service grid — two-column editorial list */
 .service-grid {
     max-width: var(--max);
     margin: 0 auto;
@@ -1135,12 +1342,6 @@ p {
 }
 
 /* ── ABOUT SECTION ───────────────────────────────────────── */
-.about-section {
-    background: var(--parchment);
-    padding: clamp(4rem, 9vh, 7rem) 0;
-    border-bottom: 1px solid var(--border);
-}
-
 .about-section .section-heading {
     max-width: var(--max);
     margin: 0 auto;
@@ -1155,43 +1356,6 @@ p {
     color: var(--ink);
     letter-spacing: -0.01em;
     margin-bottom: 0.25rem;
-}
-
-.about-content {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--edge);
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 4rem;
-    align-items: start;
-    margin-top: 2.5rem;
-}
-
-/* Photo placeholder / actual photo */
-.about-photo {
-    aspect-ratio: 3/4;
-    background: rgba(14,14,12,0.07);
-    border-radius: 2px;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-.about-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
-
-.about-text { padding-top: 0.3rem; }
-
-.about-text p {
-    font-size: 0.95rem;
-    color: var(--ink);
-    line-height: 1.82;
-    font-weight: 300;
-    max-width: 580px;
-    margin-bottom: 1.5rem;
 }
 
 .about-credentials {
@@ -1287,90 +1451,8 @@ p {
 }
 
 /* ============================================================
-   CONTACT PAGE (inner page form)
-   ============================================================ */
-.contact-page-section {
-    max-width: 760px;
-    margin: 0 auto 0 0;
-}
-
-.contact-form {
-    margin-top: 2rem;
-    background: transparent;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-}
-
-.form-group {
-    margin-bottom: 1.25rem;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--mid);
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.9rem 1rem;
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    background: #ffffff;
-    color: var(--ink);
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder { color: rgba(107,104,96,0.5); }
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(184,150,74,0.12);
-}
-.contact-form textarea {
-    min-height: 200px;
-    resize: vertical;
-}
-.contact-form .cta-button.primary { margin-top: 0.5rem; }
-
-.honeypot-field {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-/* ============================================================
    TEAM PAGE
    ============================================================ */
-.team-intro {
-    padding: 8px 0 18px;
-    margin-bottom: 8px;
-}
-
-.placeholder-note {
-    color: var(--mid);
-    font-size: 0.88rem;
-    line-height: 1.65;
-}
-
-.team-section {
-    padding: 10px 0 22px;
-    margin-bottom: 18px;
-}
-
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1473,8 +1555,6 @@ footer {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-
-/* ── Tablet (≤ 900px) ────────────────────────────────────── */
 @media (max-width: 900px) {
     .insight-strip-inner,
     .positioning-inner {
@@ -1483,7 +1563,7 @@ footer {
 
     .insight-item {
         border-left: none;
-        border-top: 1px solid rgba(245,240,232,0.07);
+        border-top: 1px solid rgba(245,240,232,0.08);
         padding: 1.1rem 0;
     }
     .insight-item:first-child { border-top: none; }
@@ -1531,7 +1611,6 @@ footer {
     .footer-inner { flex-direction: column; gap: 1rem; }
 }
 
-/* ── Mobile hamburger (≤ 768px) ─────────────────────────── */
 @media (max-width: 768px) {
     .nav-toggle { display: flex; }
 
@@ -1561,10 +1640,7 @@ footer {
         border-radius: 2px;
     }
 
-    /* Header layout on mobile */
-    .header-inner {
-        min-height: 56px;
-    }
+    .header-inner { min-height: 56px; }
 
     .hero-section {
         padding-bottom: clamp(3rem, 8vh, 5rem);
@@ -1573,9 +1649,7 @@ footer {
 
     .hero-scroll { display: none; }
 
-    .mtris-card {
-        grid-template-columns: 52px 1fr;
-    }
+    .mtris-card { grid-template-columns: 52px 1fr; }
     .mtris-card::before { font-size: 3.2rem; }
 
     .team-grid { grid-template-columns: 1fr; }
@@ -1779,4 +1853,12 @@ footer {
         gap: 2rem;
     }
     .about-photo { max-width: 160px; }
+}
+
+/* ── Small mobile (≤ 480px) ─────────────────────────────── */
+@media (max-width: 480px) {
+    .hero-title { font-size: clamp(1.85rem, 7vw, 2.4rem); }
+    .cta-group, .hero-cta { flex-direction: column; align-items: stretch; }
+    .btn, .cta-button { width: 100%; justify-content: center; }
+    .about-photo { max-width: 130px; }
 }
