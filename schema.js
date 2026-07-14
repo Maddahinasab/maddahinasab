@@ -18,7 +18,7 @@
     "alternateName": "Maddahinasab Legal Advisory — Transitional Risk Intelligence",
     "url": "https://maddahinasab.com",
     "logo": "https://maddahinasab.com/assets/images/logo2026.svg",
-    "description": "Boutique legal-strategic intelligence firm specialising exclusively in transitional, frontier, and institutionally volatile markets. Creator of the MTRIS™ framework — the Maddahinasab Transitional Risk Intelligence System.",
+    "description": "Boutique legal-strategic intelligence firm specialising exclusively in transitional, frontier, and institutionally volatile markets. Creator of the MTRIS™ framework — the Maddahinasab Transitional Risk Intelligence System — and publisher of Interregnum Counsel, a legal intelligence letter for transitional markets.",
     "slogan": "Legal Intelligence for Transitional Markets",
     "knowsAbout": [
       "Transitional market legal risk",
@@ -85,11 +85,12 @@
       "name": "Mostapha Maddahinasab",
       "honorificSuffix": "Ph.D.",
       "jobTitle": "Founder and Principal Advisor",
-      "description": "Specialist in investment law, energy governance, transitional regulatory risk, and sanctions intelligence. Creator of the MTRIS™ framework.",
+      "description": "Specialist in investment law, energy governance, transitional regulatory risk, and sanctions intelligence. Creator of the MTRIS™ framework and author of Interregnum Counsel.",
       "sameAs": [
         "https://orcid.org/0000-0002-0598-4980",
         "https://www.researchgate.net/profile/Mostapha-Maddahinasab",
-        "https://www.linkedin.com/in/mostapha-maddahinasab-28107692/"
+        "https://www.linkedin.com/in/mostapha-maddahinasab-28107692/",
+        "https://interregnumcounsel.substack.com/"
       ],
       "knowsAbout": [
         "Investment law",
@@ -124,7 +125,27 @@
 
   inject(website);
 
-  /* ── 3. PAGE-SPECIFIC SCHEMA ──────────────────────────────── */
+  /* ── 3. INTERREGNUM COUNSEL — Periodical entity (all pages) ── */
+  const interregnumCounsel = {
+    "@context": "https://schema.org",
+    "@type": "Periodical",
+    "@id": "https://maddahinasab.com/#interregnum-counsel",
+    "name": "Interregnum Counsel",
+    "alternateName": "Interregnum Counsel — A Legal Intelligence Letter for Transitional Markets",
+    "description": "A periodic legal intelligence letter distinguishing structural legal change from temporary noise in transitional markets. Published by Maddahinasab Legal Advisory and authored by Mostapha Maddahinasab, Ph.D., applying the MTRIS™ framework to real-time sanctions, regulatory, and institutional developments.",
+    "publisher": { "@id": "https://maddahinasab.com/#organisation" },
+    "author": { "@id": "https://maddahinasab.com/team.html#mostapha-maddahinasab" },
+    "url": "https://interregnumcounsel.substack.com/",
+    "sameAs": [
+      "https://interregnumcounsel.substack.com/"
+    ],
+    "inLanguage": "en",
+    "isPartOf": { "@id": "https://maddahinasab.com/#organisation" }
+  };
+
+  inject(interregnumCounsel);
+
+  /* ── 4. PAGE-SPECIFIC SCHEMA ──────────────────────────────── */
   const path = window.location.pathname.replace(/\/$/, '') || '/index.html';
 
   /* Homepage */
@@ -144,7 +165,6 @@
       }
     });
 
-    /* MTRIS™ — correct DefinedTermSet wrapper to avoid schema validation error */
     inject({
       "@context": "https://schema.org",
       "@type": "DefinedTermSet",
@@ -171,7 +191,7 @@
       "@id": "https://maddahinasab.com/whitepapers.html#webpage",
       "url": "https://maddahinasab.com/whitepapers.html",
       "name": "Research & Transitional Risk Outlooks | Maddahinasab Legal Advisory",
-      "description": "Published transitional risk outlooks applying the MTRIS™ framework to specific markets, including Iran and Afghanistan, with forthcoming analyses of Central Asia, MENA, and post-conflict environments.",
+      "description": "Published transitional risk outlooks applying the MTRIS™ framework to specific markets, including Iran and Afghanistan, the Interregnum Counsel newsletter archive, and forthcoming analyses of Central Asia, MENA, and post-conflict environments.",
       "isPartOf": { "@id": "https://maddahinasab.com/#website" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -206,6 +226,29 @@
       "datePublished": "2026",
       "about": ["Afghanistan", "De facto governance", "Post-conflict law", "Investment risk", "MTRIS"],
       "url": "https://maddahinasab.com/whitepapers.html"
+    });
+
+    inject({
+      "@context": "https://schema.org",
+      "@type": "PublicationIssue",
+      "@id": "https://maddahinasab.com/whitepapers.html#interregnum-issue-1",
+      "issueNumber": "1",
+      "name": "The Trends of Uncertainty: Energy Markets Under Renewed U.S.–Iran Tensions",
+      "headline": "Interregnum Counsel, Issue No. 1: The Trends of Uncertainty: Energy Markets Under Renewed U.S.–Iran Tensions",
+      "description": "Examines the legal and regulatory mechanics behind renewed U.S.–Iran tensions through an energy-sector lens — the Islamabad Memorandum, the narrowing of OFAC General License X to X1, comparative precedent from the JCPOA sanctions cycle, and commercial implications for energy companies, EPC contractors, insurers, banks, and investors. Includes scenario analysis and the MTRIS™ Intelligence Index.",
+      "isPartOf": { "@id": "https://maddahinasab.com/#interregnum-counsel" },
+      "author": { "@id": "https://maddahinasab.com/team.html#mostapha-maddahinasab" },
+      "publisher": { "@id": "https://maddahinasab.com/#organisation" },
+      "datePublished": "2026-07",
+      "inLanguage": "en",
+      "about": ["Iran", "United States", "Sanctions", "Energy markets", "Strait of Hormuz", "MTRIS", "Transitional risk"],
+      "url": "https://maddahinasab.com/whitepapers.html#interregnum",
+      "sameAs": "https://interregnumcounsel.substack.com/",
+      "associatedMedia": {
+        "@type": "MediaObject",
+        "contentUrl": "https://maddahinasab.com/assets/docs/newsletter/Interregnum%20Counsel%20-%20Issue%201.pdf",
+        "encodingFormat": "application/pdf"
+      }
     });
   }
 
