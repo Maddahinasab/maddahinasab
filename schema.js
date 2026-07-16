@@ -135,7 +135,8 @@
     "description": "A periodic legal intelligence letter distinguishing structural legal change from temporary noise in transitional markets. Published by Maddahinasab Legal Advisory and authored by Mostapha Maddahinasab, Ph.D., applying the MTRIS™ framework to real-time sanctions, regulatory, and institutional developments.",
     "publisher": { "@id": "https://maddahinasab.com/#organisation" },
     "author": { "@id": "https://maddahinasab.com/team.html#mostapha-maddahinasab" },
-    "url": "https://interregnumcounsel.substack.com/",
+    "url": "https://maddahinasab.com/interregnum-counsel.html",
+    "mainEntityOfPage": "https://maddahinasab.com/interregnum-counsel.html",
     "sameAs": [
       "https://interregnumcounsel.substack.com/"
     ],
@@ -191,7 +192,7 @@
       "@id": "https://maddahinasab.com/whitepapers.html#webpage",
       "url": "https://maddahinasab.com/whitepapers.html",
       "name": "Research & Transitional Risk Outlooks | Maddahinasab Legal Advisory",
-      "description": "Published transitional risk outlooks applying the MTRIS™ framework to specific markets, including Iran and Afghanistan, the Interregnum Counsel newsletter archive, and forthcoming analyses of Central Asia, MENA, and post-conflict environments.",
+      "description": "Published transitional risk outlooks applying the MTRIS™ framework to specific markets, including Iran and Afghanistan, with forthcoming analyses of Central Asia, MENA, and post-conflict environments.",
       "isPartOf": { "@id": "https://maddahinasab.com/#website" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -227,11 +228,32 @@
       "about": ["Afghanistan", "De facto governance", "Post-conflict law", "Investment risk", "MTRIS"],
       "url": "https://maddahinasab.com/whitepapers.html"
     });
+  }
+
+  /* Interregnum Counsel — dedicated newsletter page */
+  if (path.endsWith('interregnum-counsel.html')) {
+    inject({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://maddahinasab.com/interregnum-counsel.html#webpage",
+      "url": "https://maddahinasab.com/interregnum-counsel.html",
+      "name": "Interregnum Counsel | A Legal Intelligence Letter for Transitional Markets",
+      "description": "Archive and subscription page for Interregnum Counsel, the legal intelligence letter published by Maddahinasab Legal Advisory, distinguishing structural legal change from temporary noise in transitional markets.",
+      "isPartOf": { "@id": "https://maddahinasab.com/#website" },
+      "mainEntity": { "@id": "https://maddahinasab.com/#interregnum-counsel" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://maddahinasab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Newsletter", "item": "https://maddahinasab.com/interregnum-counsel.html" }
+        ]
+      }
+    });
 
     inject({
       "@context": "https://schema.org",
       "@type": "PublicationIssue",
-      "@id": "https://maddahinasab.com/whitepapers.html#interregnum-issue-1",
+      "@id": "https://maddahinasab.com/interregnum-counsel.html#issue-1",
       "issueNumber": "1",
       "name": "The Trends of Uncertainty: Energy Markets Under Renewed U.S.–Iran Tensions",
       "headline": "Interregnum Counsel, Issue No. 1: The Trends of Uncertainty: Energy Markets Under Renewed U.S.–Iran Tensions",
@@ -242,7 +264,7 @@
       "datePublished": "2026-07",
       "inLanguage": "en",
       "about": ["Iran", "United States", "Sanctions", "Energy markets", "Strait of Hormuz", "MTRIS", "Transitional risk"],
-      "url": "https://maddahinasab.com/whitepapers.html#interregnum",
+      "url": "https://maddahinasab.com/interregnum-counsel.html#archive",
       "sameAs": "https://interregnumcounsel.substack.com/",
       "associatedMedia": {
         "@type": "MediaObject",
