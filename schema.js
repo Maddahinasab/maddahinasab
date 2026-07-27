@@ -182,6 +182,74 @@
         "inDefinedTermSet": { "@id": "https://maddahinasab.com/#mtris-termset" }
       }
     });
+
+    /* ── FAQPage — AEO. Must mirror the visible <details>/<summary>
+       Q&A content on the homepage word-for-word, or close to it.
+       This is what gets lifted into AI Overviews, direct-answer
+       boxes, and voice assistant responses. ──────────────────── */
+    inject({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://maddahinasab.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is MTRIS™?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MTRIS™ (the Maddahinasab Transitional Risk Intelligence System) is a proprietary legal-strategic framework created by Mostapha Maddahinasab, Ph.D. It evaluates investment resilience across three layers — Institutional (governance legitimacy), Transactional (contractual survivability), and Operational (execution feasibility) — to assess whether a legal position will hold if political or regulatory conditions shift."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a transitional market?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A transitional market is a jurisdiction where institutional continuity, regulatory predictability, and legal durability cannot be assumed — typically due to political volatility, fragmented governance, sanctions exposure, or post-conflict reconstruction. This differs from frontier or emerging market classifications, which focus primarily on economic development stage rather than institutional stability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who does Maddahinasab Legal Advisory work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The firm advises foreign investors, private equity and fund managers, law firms requiring specialist co-counsel, institutional actors, and energy, mining, and infrastructure companies operating in or considering entry to transitional and sanctions-sensitive markets. Mandates are accepted on a selective basis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it currently legal or advisable to invest in Iran?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This depends on the current sanctions regime, which has changed materially and repeatedly in recent months, and on the specific transaction, sector, and counterparties involved. This is not general investment advice — Maddahinasab Legal Advisory provides commissioned MTRIS™ assessments evaluating specific transactions against the current legal and institutional environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Interregnum Counsel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interregnum Counsel is Maddahinasab Legal Advisory's periodic legal intelligence letter, distinguishing structural legal change from temporary noise in transitional markets. Each issue applies the MTRIS™ framework to a current development and closes with a forward-looking scenario and decision matrix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I request an MTRIS™ assessment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Commissioned MTRIS™ assessments are requested through the contact page at maddahinasab.com/contact.html, where you can describe the market, transaction, or investment scenario you need evaluated. All inquiries are reviewed personally by the Principal Advisor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What markets does Maddahinasab Legal Advisory currently cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Published MTRIS™ outlooks currently cover Iran and Afghanistan, with Iraq, Libya, Kazakhstan, Uzbekistan, Pakistan, Sudan, the Democratic Republic of Congo, post-conflict Ukraine, Georgia, and Azerbaijan under active assessment. Commissioned analysis of markets outside this list is available on request."
+          }
+        }
+      ]
+    });
   }
 
   /* Whitepapers / Research page */
