@@ -205,7 +205,7 @@
           "name": "What is a transitional market?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A transitional market is a jurisdiction where institutional continuity, regulatory predictability, and legal durability cannot be assumed — typically due to political volatility, fragmented governance, sanctions exposure, or post-conflict reconstruction. This differs from frontier or emerging market classifications, which focus primarily on economic development stage rather than institutional stability."
+            "text": "A transitional market is a jurisdiction where institutional continuity, regulatory predictability, and legal durability cannot be assumed — due to political volatility, fragmented governance, sanctions exposure, post-conflict reconstruction, or significant shifts in public policy that change the legal and regulatory environment a business already committed to. This differs from frontier or emerging market classifications, which focus primarily on economic development stage rather than institutional stability."
           }
         },
         {
@@ -213,7 +213,7 @@
           "name": "Who does Maddahinasab Legal Advisory work with?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The firm advises foreign investors, private equity and fund managers, law firms requiring specialist co-counsel, institutional actors, and energy, mining, and infrastructure companies operating in or considering entry to transitional and sanctions-sensitive markets. Mandates are accepted on a selective basis."
+            "text": "The firm currently focuses on small and medium-sized enterprises (SMEs) across every sector — not only energy, mining, and infrastructure — with particular attention to supply chain and logistics businesses. This includes smaller businesses seeking to sell products into Iran, alongside foreign investors, fund managers, law firms requiring specialist co-counsel, and institutional actors operating in or considering entry to transitional and sanctions-sensitive markets. Mandates are accepted on a selective basis."
           }
         },
         {
@@ -296,6 +296,54 @@
       "about": ["Afghanistan", "De facto governance", "Post-conflict law", "Investment risk", "MTRIS"],
       "url": "https://maddahinasab.com/whitepapers.html"
     });
+
+    inject({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://maddahinasab.com/whitepapers.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What white papers has Maddahinasab Legal Advisory published?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Published outlooks currently cover the Iran Transitional Legal Risk Framework™ and the Afghanistan Transitional Risk Outlook, both applying the MTRIS™ framework across institutional, transactional, and operational dimensions. Forthcoming analyses are in preparation for Iraq, Libya, Kazakhstan, Uzbekistan, Pakistan, Sudan, the DRC, post-conflict Ukraine, Georgia, and Azerbaijan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the Research page and Interregnum Counsel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "White papers on the Research page are standalone, in-depth MTRIS™ assessments of a specific market's legal architecture, updated periodically as conditions change. Interregnum Counsel is a separate, periodic legal intelligence letter that tracks specific developments as they happen, applying the same MTRIS™ framework to a narrower, timely question."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the MTRIS™ framework applied in these outlooks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each published outlook applies all three MTRIS™ layers sequentially — Institutional (governance legitimacy), Transactional (contractual survivability), and Operational (execution feasibility) — to a specific market, then evaluates the three findings holistically to assess overall investment resilience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I commission a market analysis for a jurisdiction not listed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Commissioned MTRIS™ assessments are available for institutional clients, fund managers, and strategic investors on a confidential basis for markets outside the published and forthcoming catalogue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these white papers free to download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, published white papers are available as free PDF downloads. Commissioned, mandate-specific analysis is a separate, paid engagement arranged directly with the firm."
+          }
+        }
+      ]
+    });
   }
 
   /* Interregnum Counsel — dedicated newsletter page */
@@ -340,6 +388,54 @@
         "encodingFormat": "application/pdf"
       }
     });
+
+    inject({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://maddahinasab.com/interregnum-counsel.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How often is Interregnum Counsel published?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interregnum Counsel is published periodically as material developments occur in transitional markets, rather than on a fixed calendar. The first three issues follow a monthly cadence, each applying the same underlying legal analysis of U.S.–Iran tensions through a different sector — energy, then supply chains and transportation, then banking and financial services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Interregnum Counsel free to subscribe to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Interregnum Counsel is delivered by email through Substack, free of charge. New issues arrive by subscription as soon as they are published, ahead of their archival on the firm's website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Interregnum Counsel and the Research page?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interregnum Counsel is a periodic legal intelligence letter tracking specific, timely developments as they happen. The Research and White Papers page hosts standalone, in-depth MTRIS™ market outlooks that are updated less frequently and cover a market's legal architecture more broadly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who writes Interregnum Counsel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Interregnum Counsel is written by Mostapha Maddahinasab, Ph.D., Founder and Principal Advisor of Maddahinasab Legal Advisory and architect of the MTRIS™ framework applied throughout the publication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cite Interregnum Counsel in my own research or reporting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Each issue carries a permanent reference code and a suggested citation format, and forecasts published in the Predictive Watch List retain a permanent reference code that is revisited and reassessed in later issues."
+          }
+        }
+      ]
+    });
   }
 
   /* Team page */
@@ -359,6 +455,46 @@
           { "@type": "ListItem", "position": 2, "name": "Expert Network", "item": "https://maddahinasab.com/team.html" }
         ]
       }
+    });
+
+    inject({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://maddahinasab.com/team.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are the members of the expert network employees of Maddahinasab Legal Advisory?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Members of the expert network are independent practitioners and specialists — attorneys, engineers, and academics with their own separate practices — who are engaged on a project basis when a specific mandate calls for their expertise. They are not employees of the firm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is responsible for advisory mandates and their outcomes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All advisory mandates are led by, and remain the responsibility of, Mostapha Maddahinasab, Ph.D., Founder and Principal Advisor. Expert network members contribute specialist input to specific matters at his direction; overall responsibility for the engagement rests with the firm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are expert network members engaged for a project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Team composition is determined on a case-by-case basis according to the legal sector, jurisdiction, and technical complexity of the mandate. Relevant specialists are engaged only where their expertise is needed for that specific matter, coordinated directly by the Principal Advisor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I join the expert network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The firm welcomes collaboration with legal practitioners, academics, policy experts, economists, regional specialists, and technical consultants whose expertise complements its advisory and research work. Inquiries can be submitted through the contact page."
+          }
+        }
+      ]
     });
   }
 
