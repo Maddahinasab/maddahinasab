@@ -420,6 +420,84 @@ p { font-size: 0.95rem; color: var(--mid); line-height: 1.8; margin-bottom: 1rem
 .contact-section p { font-size: 0.88rem; color: rgba(245,240,232,0.4); line-height: 1.75; font-weight: 300; max-width: 480px; margin-bottom: 0; }
 
 /* ============================================================
+   FAQ SECTION — AEO (Answer Engine Optimization)
+   Visible, extractable Q&A content matching FAQPage schema.
+   Uses native <details>/<summary> — works without JS, fully
+   crawlable, and accessible by default.
+   ============================================================ */
+.faq-section {
+    background: var(--parchment);
+    padding: clamp(4rem, 9vh, 7rem) 0;
+    border-bottom: 1px solid var(--border);
+}
+.faq-header {
+    max-width: var(--max-inner);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+    margin-bottom: 2.5rem;
+}
+.faq-heading {
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 0;
+}
+
+.faq-list {
+    max-width: var(--max-inner);
+    margin: 0 auto;
+    padding: 0 var(--edge);
+    border-top: 1px solid var(--border);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.4rem 0;
+}
+
+.faq-item summary {
+    font-family: var(--serif);
+    font-size: 1.02rem;
+    font-weight: 400;
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-right: 0.5rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+    content: '+';
+    font-family: var(--sans);
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--gold-dim);
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+.faq-item[open] summary::after {
+    content: '−';
+}
+
+.faq-answer {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--mid);
+    line-height: 1.85;
+    font-weight: 300;
+    max-width: 720px;
+    margin-top: 0.9rem;
+    padding-right: 1.5rem;
+}
+.faq-answer strong { color: var(--ink); font-weight: 500; }
+
+/* ============================================================
    INTERREGNUM COUNSEL — dedicated newsletter page
    ============================================================ */
 .ic-masthead { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); padding: clamp(4rem, 9vh, 6.5rem) 0; border-bottom: 1px solid rgba(245,240,232,0.06); }
@@ -468,6 +546,37 @@ p { font-size: 0.95rem; color: var(--mid); line-height: 1.8; margin-bottom: 1rem
 .ic-issue-footer { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border); }
 .ic-issue-pages { font-size: 0.72rem; color: rgba(107,104,96,0.55); letter-spacing: 0.05em; }
 .ic-archive-note { max-width: var(--max); margin: 2rem auto 0; padding: 0 var(--edge); font-size: 0.8rem; color: rgba(107,104,96,0.6); font-style: italic; }
+
+/* ── SHARE BUTTON ────────────────────────────────────────── */
+.ic-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 0.65rem 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    white-space: nowrap;
+}
+.ic-share-btn i { font-size: 0.8rem; flex-shrink: 0; }
+.ic-share-btn:hover {
+    border-color: rgba(184,150,74,0.45);
+    color: var(--gold-dim);
+    background: rgba(184,150,74,0.05);
+}
+.ic-share-btn.copied {
+    border-color: #4ade80;
+    color: #166534;
+    background: rgba(74,222,128,0.08);
+}
 
 @media (max-width: 700px) {
     .ic-issue-card { grid-template-columns: 1fr; }
