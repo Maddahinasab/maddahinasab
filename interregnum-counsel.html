@@ -130,12 +130,19 @@
                        class="wp-download-btn">
                         <i class="fas fa-download"></i> Download Issue No. 1
                     </a>
+                    <button class="ic-share-btn"
+                            data-pdf-url="assets/docs/newsletter/Interregnum Counsel - Issue 1.pdf"
+                            aria-label="Copy download link for Issue No. 1"
+                            title="Copy download link">
+                        <i class="fas fa-link"></i>
+                        <span class="ic-share-label">Copy link</span>
+                    </button>
                     <span class="ic-issue-pages">PDF &mdash; 7 pages</span>
                 </div>
             </div>
         </article>
 
-        <!-- Issue No. 2 — placeholder, uncomment and fill in when published
+        <!-- Issue No. 2 -->
         <article class="ic-issue-card reveal" aria-label="Interregnum Counsel Issue No. 2">
             <div class="ic-issue-meta">
                 <span class="ic-issue-number">02</span>
@@ -143,17 +150,26 @@
             </div>
             <div class="ic-issue-body">
                 <span class="ic-issue-badge"><i class="fas fa-circle"></i> Supply Chains &amp; Transportation</span>
-                <h3 class="ic-issue-title">[Issue 2 title]</h3>
-                <p class="ic-issue-abstract">[Issue 2 abstract]</p>
+                <h3 class="ic-issue-title">Hormuz and Beyond: Supply-Chain Reconfiguration Under Dual Chokepoint Pressure</h3>
+                <p class="ic-issue-abstract">Examines supply-chain and logistics exposure under simultaneous disruption of both the Strait of Hormuz and Bab el-Mandeb &mdash; mapping maritime route fragmentation, insurance and freight risk repricing, and the structural divergence emerging between Persian Gulf, Red Sea, and alternative land-based corridors. Covers Oman&ndash;Iran maritime governance discussions, contractual force majeure and change-in-law exposure for logistics operators, and closes with a Predictive Watch List and MTRIS&#x2122; Intelligence Index assessment across all three analytical layers.</p>
                 <div class="ic-issue-footer">
-                    <a href="assets/docs/newsletter/Interregnum Counsel - Issue 2.pdf" target="_blank" rel="noopener" class="wp-download-btn">
+                    <a href="assets/docs/newsletter/Interregnum Counsel - Issue 2.pdf"
+                       target="_blank"
+                       rel="noopener"
+                       class="wp-download-btn">
                         <i class="fas fa-download"></i> Download Issue No. 2
                     </a>
-                    <span class="ic-issue-pages">PDF</span>
+                    <button class="ic-share-btn"
+                            data-pdf-url="assets/docs/newsletter/Interregnum Counsel - Issue 2.pdf"
+                            aria-label="Copy download link for Issue No. 2"
+                            title="Copy download link">
+                        <i class="fas fa-link"></i>
+                        <span class="ic-share-label">Copy link</span>
+                    </button>
+                    <span class="ic-issue-pages">PDF &mdash; 8 pages</span>
                 </div>
             </div>
         </article>
-        -->
 
     </div>
 
@@ -242,6 +258,50 @@
         });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── Share / copy-link buttons ─────────────────────────── */
+    document.querySelectorAll('.ic-share-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const pdfPath = btn.getAttribute('data-pdf-url');
+            const fullUrl = window.location.origin + '/' + pdfPath;
+            const label   = btn.querySelector('.ic-share-label');
+
+            /* Use native Share API on mobile if available */
+            if (navigator.share) {
+                navigator.share({
+                    title: btn.getAttribute('aria-label').replace('Copy download link for ', ''),
+                    url: fullUrl
+                }).catch(() => {}); /* user cancelled — silent */
+                return;
+            }
+
+            /* Fallback: copy to clipboard */
+            navigator.clipboard.writeText(fullUrl).then(() => {
+                btn.classList.add('copied');
+                label.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    label.textContent = 'Copy link';
+                }, 2200);
+            }).catch(() => {
+                /* Ultra-fallback for old browsers */
+                const ta = document.createElement('textarea');
+                ta.value = fullUrl;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                btn.classList.add('copied');
+                label.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    label.textContent = 'Copy link';
+                }, 2200);
+            });
+        });
+    });
 </script>
 
 </body>
