@@ -391,6 +391,50 @@
 
     inject({
       "@context": "https://schema.org",
+      "@type": "PublicationIssue",
+      "@id": "https://maddahinasab.com/interregnum-counsel.html#issue-2",
+      "issueNumber": "2",
+      "name": "Hormuz and Beyond: Supply-Chain Reconfiguration Under Dual Chokepoint Pressure",
+      "headline": "Interregnum Counsel, Issue No. 2: Hormuz and Beyond: Supply-Chain Reconfiguration Under Dual Chokepoint Pressure",
+      "description": "Examines supply-chain and logistics exposure under simultaneous disruption of the Strait of Hormuz and Bab el-Mandeb — maritime route fragmentation, insurance and freight risk repricing, Oman–Iran maritime governance discussions, and contractual force majeure and change-in-law exposure for logistics operators.",
+      "isPartOf": { "@id": "https://maddahinasab.com/#interregnum-counsel" },
+      "author": { "@id": "https://maddahinasab.com/team.html#mostapha-maddahinasab" },
+      "publisher": { "@id": "https://maddahinasab.com/#organisation" },
+      "datePublished": "2026-08",
+      "inLanguage": "en",
+      "about": ["Iran", "Supply chains", "Hormuz", "Bab el-Mandeb", "Maritime risk", "MTRIS", "Sanctions"],
+      "url": "https://maddahinasab.com/interregnum-counsel.html#archive",
+      "associatedMedia": {
+        "@type": "MediaObject",
+        "contentUrl": "https://maddahinasab.com/assets/docs/newsletter/Interregnum%20Counsel%20-%20Issue%202.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    });
+
+    inject({
+      "@context": "https://schema.org",
+      "@type": "PublicationIssue",
+      "@id": "https://maddahinasab.com/interregnum-counsel.html#issue-3",
+      "issueNumber": "3",
+      "name": "Grounded: Banking Sanctions, Aviation and Naval Blockade Under A Deal That Wasn't",
+      "headline": "Interregnum Counsel, Issue No. 3: Grounded: Banking Sanctions, Aviation and Naval Blockade Under A Deal That Wasn't",
+      "description": "Examines the September 8 aviation sanctions package — Treasury's designation of 36 targets including 27 Iranian airlines, the suspension of General License J-1, and the naval blockade halting Iranian crude exports — alongside Iran's retaliatory threat against regional airports and the September 28–29 Qatari-mediated talks.",
+      "isPartOf": { "@id": "https://maddahinasab.com/#interregnum-counsel" },
+      "author": { "@id": "https://maddahinasab.com/team.html#mostapha-maddahinasab" },
+      "publisher": { "@id": "https://maddahinasab.com/#organisation" },
+      "datePublished": "2026-09",
+      "inLanguage": "en",
+      "about": ["Iran", "Banking sanctions", "Aviation sanctions", "Naval blockade", "GL J-1", "MTRIS", "Sanctions"],
+      "url": "https://maddahinasab.com/interregnum-counsel.html#archive",
+      "associatedMedia": {
+        "@type": "MediaObject",
+        "contentUrl": "https://maddahinasab.com/assets/docs/newsletter/Interregnum%20Counsel%20-%20Issue%203.pdf",
+        "encodingFormat": "application/pdf"
+      }
+    });
+
+    inject({
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "@id": "https://maddahinasab.com/interregnum-counsel.html#faq",
       "mainEntity": [
@@ -399,7 +443,7 @@
           "name": "How often is Interregnum Counsel published?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Interregnum Counsel is published periodically as material developments occur in transitional markets, rather than on a fixed calendar. The first three issues follow a monthly cadence, each applying the same underlying legal analysis of U.S.–Iran tensions through a different sector — energy, then supply chains and transportation, then banking and financial services."
+            "text": "Interregnum Counsel is published periodically as material developments warrant, rather than on a fixed calendar. The first three issues apply the same underlying legal analysis of U.S.–Iran tensions through three different sectors: energy (Issue 1), supply chains and transportation (Issue 2), and banking, aviation sanctions, and the naval blockade (Issue 3). A Quarterly Review consolidating all three is forthcoming."
           }
         },
         {
